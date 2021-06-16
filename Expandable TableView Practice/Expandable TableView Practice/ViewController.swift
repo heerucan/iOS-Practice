@@ -114,6 +114,16 @@ extension ViewController : UITableViewDataSource {
             // section이 열려있다면 다시 닫힐 수 있게 해주는 코드
             tableViewData[indexPath.section].opened = !tableViewData[indexPath.section].opened
             
+//            if tableViewData[indexPath.section].opened == true {
+//                // 그리고 펼쳐져 있을 때 셀을 누르면 다시 닫혀줘야 하기 때문에 false로 바꿔줘야 함..
+//                tableViewData[indexPath.section].opened = false
+//
+//            } else {
+//                // 처음 기본값이 false니까 얘를 펼쳐주려면 true로 바꿔줘야 함..
+//                tableViewData[indexPath.section].opened = true
+//
+//            }
+            
             // 모든 데이터를 새로고침하는 것이 아닌 해당하는 섹션 부분만 새로고침
             tableView.reloadSections([indexPath.section], with: .none)
         
@@ -122,9 +132,12 @@ extension ViewController : UITableViewDataSource {
             print("이건 sectionData 선택한 거야")
         }
         
+        print(tableViewData[indexPath.section].opened)
         print([indexPath.section], [indexPath.row])
 
         
     }
     
 }
+
+
