@@ -76,13 +76,16 @@ extension ViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableViewData[section].opened == true {
+            // tableView Section이 열려있으면 Section Cell 하나에 sectionData 개수만큼 추가해줘야 함
             return tableViewData[section].sectionData.count + 1
         } else {
+            // tableView Section이 닫혀있을 경우에는 Section Cell 하나만 보여주면 됨
             return 1
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // section 부분 코드
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
                     as? TableViewCell else { return UITableViewCell() }
@@ -90,6 +93,7 @@ extension ViewController : UITableViewDataSource {
             cell.tableLabel.text = tableViewData[indexPath.section].title
             return cell
             
+        // sectionData 부분 코드
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
                     as? TableViewCell else { return UITableViewCell() }
@@ -100,19 +104,27 @@ extension ViewController : UITableViewDataSource {
         
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if tableViewData[indexPath.section].opened == true {
-            tableViewData[indexPath.section].opened = false
-            let sections = IndexSet.init(integer: indexPath.section)
-            tableView.reloadSections(sections, with: .none)
+        // 셀 선택 시 회색에서 다시 변하게 해주는 것
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // section 부분 선택하면 열리게 설정
+        if indexPath.row == 0 {
+            // section이 열려있다면 다시 닫힐 수 있게 해주는 코드
+            tableViewData[indexPath.section].opened = !tableViewData[indexPath.section].opened
             
+            // 모든 데이터를 새로고침하는 것이 아닌 해당하는 섹션 부분만 새로고침
+            tableView.reloadSections([indexPath.section], with: .none)
+        
+        // sectionData 부분을 선택하면 아무 작동하지 않게 설정
         } else {
-            tableViewData[indexPath.section].opened = true
-            let sections = IndexSet.init(integer: indexPath.section)
-            tableView.reloadSections(sections, with: .none)
-            
+            print("이건 sectionData 선택한 거야")
         }
+        
+        print([indexPath.section], [indexPath.row])
+
+        
     }
     
 }
