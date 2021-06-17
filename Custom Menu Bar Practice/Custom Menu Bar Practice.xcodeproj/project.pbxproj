@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		5B119189267A19660024F007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B119187267A19660024F007 /* Main.storyboard */; };
 		5B11918B267A19690024F007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B11918A267A19690024F007 /* Assets.xcassets */; };
 		5B11918E267A19690024F007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B11918C267A19690024F007 /* LaunchScreen.storyboard */; };
+		5B119199267A1DDD0024F007 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5B119198267A1DDD0024F007 /* SnapKit */; };
+		5B1191A3267A28A70024F007 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1191A2267A28A70024F007 /* MenuBar.swift */; };
+		5B1191A7267A29900024F007 /* MenuCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1191A6267A29900024F007 /* MenuCollectionCell.swift */; };
+		5B1191AB267A893D0024F007 /* MainCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1191AA267A893D0024F007 /* MainCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		5B11918A267A19690024F007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B11918D267A19690024F007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B11918F267A19690024F007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B1191A2267A28A70024F007 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		5B1191A6267A29900024F007 /* MenuCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionCell.swift; sourceTree = "<group>"; };
+		5B1191AA267A893D0024F007 /* MainCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B119199267A1DDD0024F007 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,9 @@
 				5B119181267A19660024F007 /* AppDelegate.swift */,
 				5B119183267A19660024F007 /* SceneDelegate.swift */,
 				5B119185267A19660024F007 /* ViewController.swift */,
+				5B1191AA267A893D0024F007 /* MainCollectionCell.swift */,
+				5B1191A2267A28A70024F007 /* MenuBar.swift */,
+				5B1191A6267A29900024F007 /* MenuCollectionCell.swift */,
 				5B119187267A19660024F007 /* Main.storyboard */,
 				5B11918A267A19690024F007 /* Assets.xcassets */,
 				5B11918C267A19690024F007 /* LaunchScreen.storyboard */,
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = "Custom Menu Bar Practice";
+			packageProductDependencies = (
+				5B119198267A1DDD0024F007 /* SnapKit */,
+			);
 			productName = "Custom Menu Bar Practice";
 			productReference = 5B11917E267A19660024F007 /* Custom Menu Bar Practice.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 5B119175267A19660024F007;
+			packageReferences = (
+				5B119197267A1DDD0024F007 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 5B11917F267A19660024F007 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +155,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B119186267A19660024F007 /* ViewController.swift in Sources */,
+				5B1191A7267A29900024F007 /* MenuCollectionCell.swift in Sources */,
 				5B119182267A19660024F007 /* AppDelegate.swift in Sources */,
+				5B1191A3267A28A70024F007 /* MenuBar.swift in Sources */,
+				5B1191AB267A893D0024F007 /* MainCollectionCell.swift in Sources */,
 				5B119184267A19660024F007 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B119197267A1DDD0024F007 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B119198267A1DDD0024F007 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B119197267A1DDD0024F007 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5B119176267A19660024F007 /* Project object */;
 }
