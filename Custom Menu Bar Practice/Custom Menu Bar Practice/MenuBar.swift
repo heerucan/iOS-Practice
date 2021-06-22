@@ -88,14 +88,15 @@ extension MenuBar : UICollectionViewDelegate {
             nowPage = 0
             UIView.animate(withDuration: 0.3) {
                 self.slideBarView.frame.origin.x = width * (15/width)
-//                self.vc.mainCV.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .init())
-//                self.vc.mainCV.scrollToItem(at:IndexPath(item: indexPath.item, section: 0), at: .centeredHorizontally, animated: false)
+                self.vc.mainCV.scrollToItem(at:IndexPath(item: indexPath.item, section: 0), at: .init(), animated: false)
             }
             
         } else if indexPath.item == 1 {
             nowPage = 1
             UIView.animate(withDuration: 0.3) {
                 self.slideBarView.frame.origin.x = width * (15/width) + slideBarWidth
+                self.vc.mainCV.scrollToItem(at:IndexPath(item: indexPath.item, section: 0), at: .init(), animated: false)
+
 
             }
             
@@ -103,6 +104,7 @@ extension MenuBar : UICollectionViewDelegate {
             nowPage = 2
             UIView.animate(withDuration: 0.3) {
                 self.slideBarView.frame.origin.x = width * (15/width) + slideBarWidth * 2
+                self.vc.mainCV.scrollToItem(at:IndexPath(item: indexPath.item, section: 0), at: .init(), animated: false)
 
 
             }
@@ -111,6 +113,7 @@ extension MenuBar : UICollectionViewDelegate {
             nowPage = 3
             UIView.animate(withDuration: 0.3) {
                 self.slideBarView.frame.origin.x = width * (15/width) + slideBarWidth * 3
+                self.vc.mainCV.scrollToItem(at:IndexPath(item: indexPath.item, section: 0), at: .init(), animated: false)
 
             }
             
@@ -118,9 +121,11 @@ extension MenuBar : UICollectionViewDelegate {
             nowPage = 4
             UIView.animate(withDuration: 0.3) {
                 self.slideBarView.frame.origin.x = width * (15/width) + slideBarWidth * 4
+                self.vc.mainCV.scrollToItem(at:IndexPath(item: indexPath.item, section: 0), at: .init(), animated: false)
 
             }
         }
+        menuCV.reloadData()
     }
     
         
@@ -137,7 +142,14 @@ extension MenuBar : UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCollectionCell", for: indexPath) as? MenuCollectionCell else { return UICollectionViewCell() }
         cell.backgroundColor = .white
         cell.configureUI()
-        cell.menuLabel.text = menuArray[indexPath.row]
+        
+        // 메뉴 선택 시 메뉴 자체 색 변경
+        if nowPage == indexPath.row {
+            cell.setData(title: menuArray[indexPath.row], selected: true)
+        } else {
+            cell.setData(title: menuArray[indexPath.row], selected: false)
+        }
+        
         
         // menuBar 메뉴 선택 시에 첫 번째 메뉴가 계속 선택되어 있는 오류 해결을 위한 코드
         if indexPath.row == 0 {

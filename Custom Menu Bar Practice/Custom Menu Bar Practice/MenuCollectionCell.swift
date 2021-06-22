@@ -19,13 +19,6 @@ class MenuCollectionCell: UICollectionViewCell {
         label.font = .systemFont(ofSize: 16, weight: .semibold)
         return label
     }()
-    
-    // menuBar 선택하면 보라색 / 미선택 시 회색
-    override var isSelected: Bool {
-        didSet {
-            menuLabel.textColor = isSelected ? UIColor.purple : UIColor.gray
-        }
-    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,6 +38,19 @@ class MenuCollectionCell: UICollectionViewCell {
         }
         
     }
+    
+    // MARK: - setData()
+    
+    // menuBar 선택하면 보라색 / 미선택 시 회색
+    func setData(title : String, selected : Bool){
+            menuLabel.text = title
+            if selected == true {
+                menuLabel.textColor = .purple
+            }
+            else {
+                menuLabel.textColor = .lightGray
+            }
+        }
 
 
     required init?(coder: NSCoder) {
