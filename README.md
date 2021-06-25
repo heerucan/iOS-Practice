@@ -8,6 +8,7 @@
 
 <br>
 
-|날짜|공부한 내용|내용 정리|
+|날짜|공부한 내용|프로젝트|내용 정리|
 |:-|:-|:-:|
-|6월 16일|Expandable TableView|[🗳](https://roniruny.tistory.com/146)|
+| 6월 16일 | Expandable TableView | [👩‍🚀](./Expandable TableView Practice/) | [🗳](https://roniruny.tistory.com/146) | 
+| 6월 25일 | FSCalendar 라이브러리 | [👩‍🚀](./FSCalendar Practice/) | [🗳](https://roniruny.tistory.com/146) | 
