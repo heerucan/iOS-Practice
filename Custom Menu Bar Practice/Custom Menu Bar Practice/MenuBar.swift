@@ -9,6 +9,10 @@ import UIKit
 
 import SnapKit
 
+protocol CustomTabbarDelegate {
+    func scrollToIndex(to index: Int)
+}
+
 class MenuBar: UIView {
     
     let menuArray = ["컬리추천", "신상품", "베스트", "알뜰쇼핑", "특가/혜택"]
