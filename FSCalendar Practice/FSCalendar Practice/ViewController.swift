@@ -25,9 +25,7 @@ class ViewController: UIViewController {
         toggle.addTarget(self, action: #selector(pressToggleButton), for: .touchUpInside)
         return toggle
     }()
-    
-    
-    
+     
     // 날짜를 원하는 형식으로 바꿔줄 때 - DateFormatter
     let dateFormatter : DateFormatter = {
         
@@ -170,6 +168,7 @@ class ViewController: UIViewController {
 // MARK: - FSCalendarDataSource
 
 extension ViewController: FSCalendarDataSource {
+
     
     // 날짜 아래에 부제목을 다는 함수
     func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
@@ -187,6 +186,7 @@ extension ViewController: FSCalendarDataSource {
         return subTitle
         
     }
+
     
     
 }
@@ -204,7 +204,6 @@ extension ViewController: FSCalendarDelegate {
         }
     }
     
-    //    func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
-    //        calendar.frame = CGRect(
-    //    }
+    
+   
 }
