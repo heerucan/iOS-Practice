@@ -12,7 +12,9 @@ import SnapKit
 
 class ViewController: UIViewController {
     // MARK: - Properties
-    let textView = UITextView().then {
+    let placeholder = "(예 : 오늘 아침에 일어나서 중랑천 2.5km 뛰었음)"
+    
+    let activityTextView = UITextView().then {
         $0.font = .systemFont(ofSize: 14)
         $0.layer.cornerRadius = 18
         $0.backgroundColor = .black200
@@ -31,6 +33,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         setupAutoLayout()
+        setupTextView()
     }
     
     // MARK: - Custom Method
@@ -39,22 +42,54 @@ class ViewController: UIViewController {
     }
     
     func setupAutoLayout() {
-        view.addSubview(textView)
+        view.addSubview(activityTextView)
         view.addSubview(letterNumLabel)
 
-        textView.snp.makeConstraints { make in
+        activityTextView.snp.makeConstraints { make in
             make.centerX.centerY.equalToSuperview()
             make.height.equalTo(190)
             make.width.equalTo(319)
         }
         
         letterNumLabel.snp.makeConstraints { make in
-            make.top.equalTo(textView.snp.bottom).offset(6)
+            make.top.equalTo(activityTextView.snp.bottom).offset(6)
             make.trailing.equalToSuperview().inset(28)
         }
+    }
+    
+    func setupTextView() {
+        activityTextView.delegate = self
+        activityTextView.text = placeholder
+        activityTextView.textColor = .gray200
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true) /// 화면을 누르면 키보드 내려가게 하는 것
     }
 }
 
 extension ViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        activityTextView.layer.borderWidth = 1
+        activityTextView.layer.borderColor = UIColor.pink100.cgColor
+        
+        /// 플레이스홀더
+        if textView.text.isEmpty {
+            activityTextView.textColor = .gray200
+            activityTextView.text = placeholder
+        } else if textView.text == placeholder {
+            activityTextView.textColor = .white
+            activityTextView.text = nil
+        }
+    }
     
+    func textViewDidEndEditing(_ textView: UITextView) {
+        activityTextView.layer.borderWidth = 0
+        
+        /// 플레이스홀더
+        if textView.text.isEmpty {
+            activityTextView.textColor = .gray200
+            activityTextView.text = placeholder
+        }
+    }
 }
