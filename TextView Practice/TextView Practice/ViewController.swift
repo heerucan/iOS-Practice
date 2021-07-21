@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         $0.font = .systemFont(ofSize: 14)
         $0.layer.cornerRadius = 18
         $0.backgroundColor = .black200
+        $0.tintColor = .pink100
         $0.textContainerInset = UIEdgeInsets(top: 18, left: 18, bottom: 18, right: 18)
     }
     
@@ -44,9 +45,10 @@ class ViewController: UIViewController {
     func setupAutoLayout() {
         view.addSubview(activityTextView)
         view.addSubview(letterNumLabel)
-
+        
         activityTextView.snp.makeConstraints { make in
-            make.centerX.centerY.equalToSuperview()
+            make.top.equalTo(200)
+            make.centerX.equalToSuperview()
             make.height.equalTo(190)
             make.width.equalTo(319)
         }
@@ -59,8 +61,8 @@ class ViewController: UIViewController {
     
     func setupTextView() {
         activityTextView.delegate = self
-        activityTextView.text = placeholder
-        activityTextView.textColor = .gray200
+        activityTextView.text = placeholder /// 초반 placeholder 생성
+        activityTextView.textColor = .gray200 /// 초반 placeholder 색상 설정
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -70,6 +72,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
+        /// 텍스트뷰 입력 시 테두리 생기게 하기
         activityTextView.layer.borderWidth = 1
         activityTextView.layer.borderColor = UIColor.pink100.cgColor
         
@@ -83,13 +86,30 @@ extension ViewController: UITextViewDelegate {
         }
     }
     
+    func textViewDidChange(_ textView: UITextView) {
+        /// 글자 수 제한
+        if activityTextView.text.count > 150 {
+            activityTextView.deleteBackward()
+        }
+        
+        /// 아래 글자 수 표시되게 하기
+        letterNumLabel.text = "\(activityTextView.text.count)/150"
+        
+        /// 글자 수 부분 색상 변경
+        let attributedString = NSMutableAttributedString(string: "\(activityTextView.text.count)/150")
+        attributedString.addAttribute(.foregroundColor, value: UIColor.pink100, range: ("\(activityTextView.text.count)/150" as NSString).range(of:"\(activityTextView.text.count)"))
+        letterNumLabel.attributedText = attributedString
+    }
+    
     func textViewDidEndEditing(_ textView: UITextView) {
+        /// 텍스트뷰 입력 완료시 테두리 없애기
         activityTextView.layer.borderWidth = 0
         
         /// 플레이스홀더
         if textView.text.isEmpty {
             activityTextView.textColor = .gray200
             activityTextView.text = placeholder
+            letterNumLabel.textColor = .gray200 /// 텍스트 개수가 0일 경우에는 글자 수 표시 색상이 모두 gray 색이게 설정
         }
     }
 }
