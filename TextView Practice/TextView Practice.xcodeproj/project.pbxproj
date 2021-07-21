@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		5B66A88926A6C9400057C121 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B66A88726A6C9400057C121 /* Main.storyboard */; };
 		5B66A88B26A6C9430057C121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B66A88A26A6C9430057C121 /* Assets.xcassets */; };
 		5B66A88E26A6C9430057C121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B66A88C26A6C9430057C121 /* LaunchScreen.storyboard */; };
+		5B66A89826A6CA710057C121 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 5B66A89726A6CA710057C121 /* Then */; };
+		5B66A89C26A6CBC80057C121 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5B66A89B26A6CBC80057C121 /* SnapKit */; };
+		5B66A8A026A6CC410057C121 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66A89F26A6CC410057C121 /* UIColor + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,7 @@
 		5B66A88A26A6C9430057C121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B66A88D26A6C9430057C121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B66A88F26A6C9430057C121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B66A89F26A6CC410057C121 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B66A89826A6CA710057C121 /* Then in Frameworks */,
+				5B66A89C26A6CBC80057C121 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +62,7 @@
 		5B66A88026A6C9400057C121 /* TextView Practice */ = {
 			isa = PBXGroup;
 			children = (
+				5B66A89E26A6CC2E0057C121 /* Extension */,
 				5B66A88126A6C9400057C121 /* AppDelegate.swift */,
 				5B66A88326A6C9400057C121 /* SceneDelegate.swift */,
 				5B66A88526A6C9400057C121 /* ViewController.swift */,
@@ -65,6 +72,14 @@
 				5B66A88F26A6C9430057C121 /* Info.plist */,
 			);
 			path = "TextView Practice";
+			sourceTree = "<group>";
+		};
+		5B66A89E26A6CC2E0057C121 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5B66A89F26A6CC410057C121 /* UIColor + Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +98,10 @@
 			dependencies = (
 			);
 			name = "TextView Practice";
+			packageProductDependencies = (
+				5B66A89726A6CA710057C121 /* Then */,
+				5B66A89B26A6CBC80057C121 /* SnapKit */,
+			);
 			productName = "TextView Practice";
 			productReference = 5B66A87E26A6C9400057C121 /* TextView Practice.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +129,10 @@
 				Base,
 			);
 			mainGroup = 5B66A87526A6C9400057C121;
+			packageReferences = (
+				5B66A89626A6CA710057C121 /* XCRemoteSwiftPackageReference "Then" */,
+				5B66A89A26A6CBC80057C121 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 5B66A87F26A6C9400057C121 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B66A88626A6C9400057C121 /* ViewController.swift in Sources */,
+				5B66A8A026A6CC410057C121 /* UIColor + Extension.swift in Sources */,
 				5B66A88226A6C9400057C121 /* AppDelegate.swift in Sources */,
 				5B66A88426A6C9400057C121 /* SceneDelegate.swift in Sources */,
 			);
@@ -341,6 +365,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B66A89626A6CA710057C121 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+		5B66A89A26A6CBC80057C121 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B66A89726A6CA710057C121 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B66A89626A6CA710057C121 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		5B66A89B26A6CBC80057C121 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B66A89A26A6CBC80057C121 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5B66A87626A6C9400057C121 /* Project object */;
 }
