@@ -77,7 +77,7 @@ extension ViewController: UITextViewDelegate {
         activityTextView.layer.borderColor = UIColor.pink100.cgColor
         
         /// 플레이스홀더
-        if textView.text.isEmpty {
+        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             activityTextView.textColor = .gray200
             activityTextView.text = placeholder
         } else if textView.text == placeholder {
@@ -106,10 +106,11 @@ extension ViewController: UITextViewDelegate {
         activityTextView.layer.borderWidth = 0
         
         /// 플레이스홀더
-        if textView.text.isEmpty {
+        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || textView.text == placeholder {
             activityTextView.textColor = .gray200
             activityTextView.text = placeholder
             letterNumLabel.textColor = .gray200 /// 텍스트 개수가 0일 경우에는 글자 수 표시 색상이 모두 gray 색이게 설정
+            letterNumLabel.text = "0/150"
         }
     }
 }
