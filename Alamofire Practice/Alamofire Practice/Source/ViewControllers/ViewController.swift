@@ -7,6 +7,7 @@
 
 import UIKit
 
+import Alamofire
 import SnapKit
 import Then
 
@@ -18,6 +19,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         setupAutoLayout()
+        getData()
+        
     }
     
     // MARK: - Custom Method
@@ -27,6 +30,10 @@ class ViewController: UIViewController {
     
     func setupAutoLayout() {
         
+    }
+    
+    func getData() {
+        ExampleService.shared.getExampleData()
     }
 }
 

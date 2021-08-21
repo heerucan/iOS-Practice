@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2233BA750F5DBA607BC8374B /* Pods_Alamofire_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCB4BF5E49D86485A18CA0D /* Pods_Alamofire_Practice.framework */; };
+		5B4B4D4726D141DD00A573A3 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4B4D4626D141DC00A573A3 /* NetworkResult.swift */; };
+		5B4B4D4C26D1422C00A573A3 /* API Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4B4D4B26D1422C00A573A3 /* API Constants.swift */; };
+		5B4B4D4F26D142B400A573A3 /* ExampleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4B4D4E26D142B400A573A3 /* ExampleDataModel.swift */; };
+		5B4B4D5426D146A300A573A3 /* ExampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4B4D5326D146A300A573A3 /* ExampleService.swift */; };
 		5BC2AC4426D0B9E4005F8447 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AC4326D0B9E4005F8447 /* AppDelegate.swift */; };
 		5BC2AC4626D0B9E4005F8447 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AC4526D0B9E4005F8447 /* SceneDelegate.swift */; };
 		5BC2AC4826D0B9E4005F8447 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2AC4726D0B9E4005F8447 /* ViewController.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B4B4D4626D141DC00A573A3 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		5B4B4D4B26D1422C00A573A3 /* API Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Constants.swift"; sourceTree = "<group>"; };
+		5B4B4D4E26D142B400A573A3 /* ExampleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDataModel.swift; sourceTree = "<group>"; };
+		5B4B4D5326D146A300A573A3 /* ExampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleService.swift; sourceTree = "<group>"; };
 		5BC2AC4026D0B9E4005F8447 /* Alamofire Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alamofire Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC2AC4326D0B9E4005F8447 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BC2AC4526D0B9E4005F8447 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +104,7 @@
 		5BC2AC5A26D0BA0F005F8447 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				5BC2AC6126D0BA9E005F8447 /* API Service */,
+				5BC2AC6126D0BA9E005F8447 /* Network */,
 				5BC2AC4C26D0B9E7005F8447 /* Assets.xcassets */,
 				5BC2AC5E26D0BA51005F8447 /* Storyboards */,
 			);
@@ -121,6 +129,7 @@
 		5BC2AC5D26D0BA26005F8447 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5B4B4D4E26D142B400A573A3 /* ExampleDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,11 +160,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		5BC2AC6126D0BA9E005F8447 /* API Service */ = {
+		5BC2AC6126D0BA9E005F8447 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				5B4B4D4626D141DC00A573A3 /* NetworkResult.swift */,
+				5B4B4D4B26D1422C00A573A3 /* API Constants.swift */,
+				5B4B4D5326D146A300A573A3 /* ExampleService.swift */,
 			);
-			path = "API Service";
+			path = Network;
 			sourceTree = "<group>";
 		};
 		BE521F6BF35ECC00FF32C85A /* Frameworks */ = {
@@ -280,10 +292,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B4B4D4F26D142B400A573A3 /* ExampleDataModel.swift in Sources */,
 				5BC2AC6326D0BACD005F8447 /* UIView + Extension.swift in Sources */,
+				5B4B4D4726D141DD00A573A3 /* NetworkResult.swift in Sources */,
 				5BC2AC4826D0B9E4005F8447 /* ViewController.swift in Sources */,
+				5B4B4D5426D146A300A573A3 /* ExampleService.swift in Sources */,
 				5BC2AC4426D0B9E4005F8447 /* AppDelegate.swift in Sources */,
 				5BC2AC4626D0B9E4005F8447 /* SceneDelegate.swift in Sources */,
+				5B4B4D4C26D1422C00A573A3 /* API Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
