@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -50,7 +50,6 @@
 				9B44E929628912508521AF00 /* Pods-Alamofire Practice.debug.xcconfig */,
 				CEB8814E83C4C8C95A808C93 /* Pods-Alamofire Practice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -77,6 +76,7 @@
 			children = (
 				5BC2AC5926D0BA0A005F8447 /* Source */,
 				5BC2AC5A26D0BA0F005F8447 /* Resource */,
+				5BC2AC5126D0B9E7005F8447 /* Info.plist */,
 			);
 			path = "Alamofire Practice";
 			sourceTree = "<group>";
@@ -98,7 +98,6 @@
 			children = (
 				5BC2AC6126D0BA9E005F8447 /* API Service */,
 				5BC2AC4C26D0B9E7005F8447 /* Assets.xcassets */,
-				5BC2AC5126D0B9E7005F8447 /* Info.plist */,
 				5BC2AC5E26D0BA51005F8447 /* Storyboards */,
 			);
 			path = Resource;

@@ -12,5 +12,6 @@ target 'Alamofire Practice' do
   pod 'lottie-ios'
   pod 'Moya', '~> 14.0'
   pod 'Kingfisher', '~> 6.0'
+  pod 'AlamofireNetworkActivityLogger', '~> 3.4'
 
 end
