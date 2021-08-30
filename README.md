@@ -1,9 +1,10 @@
 # 🦋 iOS Practice Repo 🦋
 
 
-#### 🤔 정신차려 후릐야.. "도약".. 해야지?
+### 🤔🤔🤔 정신차려 후릐야... 도약... 해야지? 🤔🤔🤔
 
-##### ✨✨✨ iOS + Swift 공부한 걸 기록합니다. 뽀개보쟈~~~!
+##### ✨ iOS + Swift 공부한 걸 푸쉬합니다... 다 뽀개보쟈 취업까지 뽀개 ~~~! 
+##### 병맛컨셉 레포라서 커밋메시지 지맘대로주의
 
 
 <br>
@@ -16,3 +17,8 @@
 | NotificationCenter Practice | [👩‍🚀](https://github.com/heerucan/iOS-Practice/tree/main/NotificationCenter%20Practice) | [🗳](https://roniruny.tistory.com/151) | 
 | Frame과 Bounds 뽀개기 | [👩‍🚀](https://github.com/heerucan/iOS-Practice/tree/main/iOS%20Practice) | [🗳](https://elastic-failing-242.notion.site/Frame-Bounds-c07d86028ac64f98a2326f4182ed7395) | 
 | 어려운 MVVM 뽀개기 | [👩‍🚀](https://github.com/heerucan/iOS-Practice/tree/main/MVVM-From-MVC%203) | [🗳](https://elastic-failing-242.notion.site/MVVM-RxSwift-75faeea12ac84da78d510aa6bd5c3ea5) | 
+| Circle Progress Bar 약간 뽀개기 | [👩‍🚀](https://github.com/heerucan/iOS-Practice/tree/main/ProgressBar%20Practice) | [🗳](https://freezing-phalange-d42.notion.site/Circle-Progress-Bar-0693b085406c4328a5fb4209f1600f4c) | 
+
+
+
+
