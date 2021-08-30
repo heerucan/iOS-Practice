@@ -13,7 +13,14 @@ import Then
 class ViewController: UIViewController {
     // MARK: - Properties
 
-    let circleView = CircleView()
+    let catchuView = UIView().then {
+        $0.layer.cornerRadius = 75
+        $0.backgroundColor = .systemPink
+    }
+    
+    let circleView = CircleView().then {
+        $0.backgroundColor = .clear
+    }
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -25,11 +32,17 @@ class ViewController: UIViewController {
     // MARK: - Custom Method
     func configUI() {
         circleView.frame = self.view.frame
-//        circleView.backgroundColor = .clear
     }
     
     func setupAutoLayout() {
+        view.addSubview(catchuView)
         view.addSubview(circleView)
+        
+        catchuView.snp.makeConstraints { make in
+            make.centerX.equalTo(circleView.snp.centerX)
+            make.centerY.equalTo(circleView.snp.centerY)
+            make.width.height.equalTo(150)
+        }
         
         circleView.snp.makeConstraints { make in
             make.top.equalTo(100)
