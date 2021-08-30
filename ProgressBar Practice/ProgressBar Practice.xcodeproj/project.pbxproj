@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		5B3C142D26DCDFDE0014AAC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3C142B26DCDFDE0014AAC8 /* Main.storyboard */; };
 		5B3C142F26DCDFE10014AAC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B3C142E26DCDFE10014AAC8 /* Assets.xcassets */; };
 		5B3C143226DCDFE10014AAC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3C143026DCDFE10014AAC8 /* LaunchScreen.storyboard */; };
+		5B3C144026DCEA150014AAC8 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3C143F26DCEA140014AAC8 /* CircleProgressView.swift */; };
 		BE290CE7BA3DCFADA05DD104 /* Pods_ProgressBar_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D80ADBA48B4002D463A749B /* Pods_ProgressBar_Practice.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		5B3C142E26DCDFE10014AAC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B3C143126DCDFE10014AAC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B3C143326DCDFE10014AAC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B3C143F26DCEA140014AAC8 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		9D80ADBA48B4002D463A749B /* Pods_ProgressBar_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProgressBar_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE7964DD7302663A7D80402 /* Pods-ProgressBar Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressBar Practice.release.xcconfig"; path = "Target Support Files/Pods-ProgressBar Practice/Pods-ProgressBar Practice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,7 +50,6 @@
 				3BB148A88CEF4075004A6D7D /* Pods-ProgressBar Practice.debug.xcconfig */,
 				DBE7964DD7302663A7D80402 /* Pods-ProgressBar Practice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,6 +76,7 @@
 			children = (
 				5B3C142526DCDFDE0014AAC8 /* AppDelegate.swift */,
 				5B3C142726DCDFDE0014AAC8 /* SceneDelegate.swift */,
+				5B3C143F26DCEA140014AAC8 /* CircleProgressView.swift */,
 				5B3C142926DCDFDE0014AAC8 /* ViewController.swift */,
 				5B3C142B26DCDFDE0014AAC8 /* Main.storyboard */,
 				5B3C142E26DCDFE10014AAC8 /* Assets.xcassets */,
@@ -207,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B3C142A26DCDFDE0014AAC8 /* ViewController.swift in Sources */,
+				5B3C144026DCEA150014AAC8 /* CircleProgressView.swift in Sources */,
 				5B3C142626DCDFDE0014AAC8 /* AppDelegate.swift in Sources */,
 				5B3C142826DCDFDE0014AAC8 /* SceneDelegate.swift in Sources */,
 			);

@@ -12,6 +12,8 @@ import Then
 
 class ViewController: UIViewController {
     // MARK: - Properties
+
+    let circleView = CircleView()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -22,11 +24,17 @@ class ViewController: UIViewController {
     
     // MARK: - Custom Method
     func configUI() {
-        
+        circleView.frame = self.view.frame
+        circleView.backgroundColor = .clear
     }
     
     func setupAutoLayout() {
+        view.addSubview(circleView)
         
+        circleView.snp.makeConstraints { make in
+            make.top.equalTo(100)
+            make.centerX.equalToSuperview()
+        }
     }
 }
 
