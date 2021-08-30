@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     // MARK: - Custom Method
     func configUI() {
         circleView.frame = self.view.frame
-        circleView.backgroundColor = .clear
+//        circleView.backgroundColor = .clear
     }
     
     func setupAutoLayout() {
