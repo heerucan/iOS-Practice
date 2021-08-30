@@ -39,15 +39,32 @@ class CircleView: UIView {
     
     
     // 원을 만들어 줄 수 있는 이니셜라이저
+//    override func draw(_ rect: CGRect) {
+//        let path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0,
+//                                               width: self.frame.width,
+//                                               height: self.frame.width/2))
+//        path.lineWidth = 3
+//        path.fill()
+//        UIColor.green.set()
+//        path.stroke()
+//        path.close()
+//
+//    }
+    
+    
     override func draw(_ rect: CGRect) {
-        let path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0,
-                                               width: self.frame.width,
-                                               height: self.frame.width/2))
+        let viewCenter = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
+        let path = UIBezierPath()
+        path.move(to: viewCenter)
+        path.addArc(withCenter: viewCenter,
+                    radius: 100,
+                    startAngle: 0,
+                    endAngle: (135 * .pi) / 180,
+                    clockwise: true)
         path.lineWidth = 3
         path.fill()
+        path.close()
         UIColor.green.set()
         path.stroke()
-        path.close()
-        
     }
 }
