@@ -31,9 +31,9 @@ class CircleView: UIView {
         path.addLine(to: CGPoint(x: self.frame.width, y: self.frame.height))
         path.addLine(to: CGPoint(x: 0, y: self.frame.height))
         path.close()
-        path.fill()
-
         UIColor.systemRed.set()
         path.stroke()
+        path.fill()
+
     }
 }
