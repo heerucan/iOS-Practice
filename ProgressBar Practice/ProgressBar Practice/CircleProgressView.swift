@@ -59,7 +59,7 @@ class CircleView: UIView {
                                     startAngle: -(0.5 * .pi),
                                     endAngle: (1.5 * .pi),
                                     clockwise: true)
-        backPath.lineWidth = 35
+        backPath.lineWidth = 10
         UIColor.lightGray.set()
         backPath.stroke()
         
@@ -73,8 +73,8 @@ class CircleView: UIView {
         let layer = CAShapeLayer()
         layer.path = path.cgPath
         layer.fillColor = UIColor.clear.cgColor
-        layer.strokeColor = UIColor.green.cgColor
-        layer.lineWidth = 20.0
+        layer.strokeColor = UIColor.blue.cgColor
+        layer.lineWidth = 10.0
         layer.lineJoin = .bevel
         layer.lineCap = .butt
         self.layer.addSublayer(layer)

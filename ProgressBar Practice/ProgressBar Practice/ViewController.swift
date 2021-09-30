@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     // MARK: - Properties
 
     let catchuView = UIView().then {
-        $0.layer.cornerRadius = 75
+        $0.layer.cornerRadius = 90
         $0.backgroundColor = .systemPink
     }
     
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         catchuView.snp.makeConstraints { make in
             make.centerX.equalTo(circleView.snp.centerX)
             make.centerY.equalTo(circleView.snp.centerY)
-            make.width.height.equalTo(150)
+            make.width.height.equalTo(180)
         }
         
         circleView.snp.makeConstraints { make in
