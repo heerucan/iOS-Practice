@@ -7,13 +7,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+import Firebase
 
+class ViewController: UIViewController {
+    // MARK: - Properties
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var pwTextField: UITextField!
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
+    
+    @IBAction func loginButton(_ sender: Any) {
+        guard let email = emailTextField.text, !email.isEmpty,
+              let pw = pwTextField.text, !pw.isEmpty else {
+                  print("텍스트필드에 안써줬다.")
+                  return
+              }
+    }
+    
 }
 
