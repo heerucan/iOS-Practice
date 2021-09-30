@@ -44,11 +44,11 @@
                                     <constraint firstAttribute="height" constant="50" id="o7g-XF-ycR"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="로그인하기">
+                                <buttonConfiguration key="configuration" style="filled" title="가입하기">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W4O-66-rPk"/>
+                                    <action selector="signUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gSD-tw-luK"/>
                                 </connections>
                             </button>
                         </subviews>
