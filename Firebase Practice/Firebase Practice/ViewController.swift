@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 
 class ViewController: UIViewController {
+    
     // MARK: - Properties
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
@@ -20,6 +21,36 @@ class ViewController: UIViewController {
         
     }
     
+    // MARK: - 로그인
+    @IBAction func signInButton(_ sender: UIButton) {
+        guard let email = emailTextField.text, !email.isEmpty,
+              let pw = pwTextField.text, !pw.isEmpty else {
+                  print("이메일과 패스워드를 입력해주세요.")
+                  return
+              }
+        
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: pw) { [weak self] user, error in
+            if let error = error, user == nil {
+                let alert = UIAlertController(
+                    title: "로그인 실패",
+                    message: error.localizedDescription,
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "확인", style: .default))
+                self?.present(alert, animated: true, completion: nil)
+                
+            } else {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                guard let nextVC = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
+                        as? SecondViewController else { return }
+                nextVC.text = "로그인 성공"
+                self?.navigationController?.pushViewController(nextVC, animated: true)
+            }
+        }
+        
+    }
+    
+    // MARK: - 회원가입
     @IBAction func signUpButton(_ sender: UIButton) {
         guard let email = emailTextField.text, !email.isEmpty,
               let pw = pwTextField.text, !pw.isEmpty else {
@@ -27,16 +58,21 @@ class ViewController: UIViewController {
                   return
               }
         
-        // 회원가입
         FirebaseAuth.Auth.auth().createUser(withEmail: email, password: pw) { authResult, error in
-            guard let user = authResult?.user else { return }
             if error == nil { // error가 아닌 경우
-                print("user------------------------")
-                print(user)
+                FirebaseAuth.Auth.auth().signIn(withEmail: email, password: pw)
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                guard let nextVC = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
+                        as? SecondViewController else { return }
+                nextVC.text = "회원가입 성공"
+                self.navigationController?.pushViewController(nextVC, animated: true)
+                
             } else {
                 print(error?.localizedDescription ?? "회원가입 실패")
             }
         }
     }
 }
+
 
