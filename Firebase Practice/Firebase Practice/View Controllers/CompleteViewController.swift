@@ -9,19 +9,18 @@ import UIKit
 
 import FirebaseAuth
 
-class SecondViewController: UIViewController {
+class CompleteViewController: UIViewController {
     
     var text: String?
 
-    @IBOutlet weak var successLabel: UILabel!
+    @IBOutlet weak var navigationBar: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
-        navigationController?.isNavigationBarHidden = true
         
         if let text = text {
-            successLabel.text = text
+            navigationBar.title = text
         }
     }
     

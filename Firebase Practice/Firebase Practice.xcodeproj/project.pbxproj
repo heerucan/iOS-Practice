@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5B4F0289270610E700C04D75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B4F0288270610E700C04D75 /* GoogleService-Info.plist */; };
-		5B4F028B2706398A00C04D75 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F028A2706398A00C04D75 /* SecondViewController.swift */; };
+		5B4F028B2706398A00C04D75 /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F028A2706398A00C04D75 /* CompleteViewController.swift */; };
+		5B4F028D270774C200C04D75 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F028C270774C200C04D75 /* SignUpViewController.swift */; };
 		5B5A61ED2706043D002E2C54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A61EC2706043D002E2C54 /* AppDelegate.swift */; };
 		5B5A61EF2706043D002E2C54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A61EE2706043D002E2C54 /* SceneDelegate.swift */; };
 		5B5A61F12706043D002E2C54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A61F02706043D002E2C54 /* ViewController.swift */; };
@@ -21,7 +22,8 @@
 /* Begin PBXFileReference section */
 		320982A579DBACF8575AA44F /* Pods-Firebase Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Practice.debug.xcconfig"; path = "Target Support Files/Pods-Firebase Practice/Pods-Firebase Practice.debug.xcconfig"; sourceTree = "<group>"; };
 		5B4F0288270610E700C04D75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5B4F028A2706398A00C04D75 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5B4F028A2706398A00C04D75 /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
+		5B4F028C270774C200C04D75 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5B5A61E92706043D002E2C54 /* Firebase Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5A61EC2706043D002E2C54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B5A61EE2706043D002E2C54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B4F028E2707793500C04D75 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A61F02706043D002E2C54 /* ViewController.swift */,
+				5B4F028C270774C200C04D75 /* SignUpViewController.swift */,
+				5B4F028A2706398A00C04D75 /* CompleteViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5B4F028F2707794D00C04D75 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A61EC2706043D002E2C54 /* AppDelegate.swift */,
+				5B5A61EE2706043D002E2C54 /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		5B4F02902707796100C04D75 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A61F727060440002E2C54 /* LaunchScreen.storyboard */,
+				5B5A61F22706043D002E2C54 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		5B5A61E02706043D002E2C54 = {
 			isa = PBXGroup;
 			children = (
@@ -68,13 +98,10 @@
 			isa = PBXGroup;
 			children = (
 				5B4F0288270610E700C04D75 /* GoogleService-Info.plist */,
-				5B5A61EC2706043D002E2C54 /* AppDelegate.swift */,
-				5B5A61EE2706043D002E2C54 /* SceneDelegate.swift */,
-				5B5A61F02706043D002E2C54 /* ViewController.swift */,
-				5B4F028A2706398A00C04D75 /* SecondViewController.swift */,
-				5B5A61F22706043D002E2C54 /* Main.storyboard */,
+				5B4F028F2707794D00C04D75 /* Support */,
+				5B4F02902707796100C04D75 /* Storyboards */,
+				5B4F028E2707793500C04D75 /* View Controllers */,
 				5B5A61F527060440002E2C54 /* Assets.xcassets */,
-				5B5A61F727060440002E2C54 /* LaunchScreen.storyboard */,
 				5B5A61FA27060440002E2C54 /* Info.plist */,
 			);
 			path = "Firebase Practice";
@@ -213,10 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B4F028B2706398A00C04D75 /* SecondViewController.swift in Sources */,
+				5B4F028B2706398A00C04D75 /* CompleteViewController.swift in Sources */,
 				5B5A61F12706043D002E2C54 /* ViewController.swift in Sources */,
 				5B5A61ED2706043D002E2C54 /* AppDelegate.swift in Sources */,
 				5B5A61EF2706043D002E2C54 /* SceneDelegate.swift in Sources */,
+				5B4F028D270774C200C04D75 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +402,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,6 +432,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

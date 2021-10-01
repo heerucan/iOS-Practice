@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     // MARK: - 로그인
@@ -30,6 +29,7 @@ class ViewController: UIViewController {
               }
         
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: pw) { [weak self] user, error in
+            // 에러가 나거나 유저가 없을 경우
             if let error = error, user == nil {
                 let alert = UIAlertController(
                     title: "로그인 실패",
@@ -42,36 +42,24 @@ class ViewController: UIViewController {
             } else {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 guard let nextVC = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
-                        as? SecondViewController else { return }
+                        as? CompleteViewController else { return }
                 nextVC.text = "로그인 성공"
                 self?.navigationController?.pushViewController(nextVC, animated: true)
             }
         }
-        
     }
     
+    // MARK: - Apple 로그인
+    @IBAction func appleButton(_ sender: UIButton) {
+        
+    }
+        
     // MARK: - 회원가입
     @IBAction func signUpButton(_ sender: UIButton) {
-        guard let email = emailTextField.text, !email.isEmpty,
-              let pw = pwTextField.text, !pw.isEmpty else {
-                  print("텍스트필드에 안써줬다.")
-                  return
-              }
-        
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: pw) { authResult, error in
-            if error == nil { // error가 아닌 경우
-                FirebaseAuth.Auth.auth().signIn(withEmail: email, password: pw)
-                
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                guard let nextVC = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
-                        as? SecondViewController else { return }
-                nextVC.text = "회원가입 성공"
-                self.navigationController?.pushViewController(nextVC, animated: true)
-                
-            } else {
-                print(error?.localizedDescription ?? "회원가입 실패")
-            }
-        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let nextVC = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
+                as? SignUpViewController else { return }
+        navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 
