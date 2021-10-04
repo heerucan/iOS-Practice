@@ -2,17 +2,16 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vkk-uf-gpf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ViewController-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" title="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Firebase_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Firebase_Practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="1023" y="62"/>
         </scene>
-        <!--SignUpViewController-->
+        <!--Sign Up View Controller-->
         <scene sceneID="swo-ks-Uc2">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" title="SignUpViewController" id="Stj-JY-nRc" customClass="SignUpViewController" customModule="Firebase_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="Stj-JY-nRc" customClass="SignUpViewController" customModule="Firebase_Practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ND2-cE-g5g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,16 +207,22 @@
             </objects>
             <point key="canvasLocation" x="1706" y="62"/>
         </scene>
-        <!--SecondViewController-->
+        <!--Complete View Controller-->
         <scene sceneID="i1y-2Z-CrL">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" title="SecondViewController" id="9oG-PZ-tZA" customClass="CompleteViewController" customModule="Firebase_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompleteViewController" id="9oG-PZ-tZA" customClass="CompleteViewController" customModule="Firebase_Practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rew-p5-reW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환영한다. 마코카." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-Gu-lBx">
+                                <rect key="frame" x="60" y="234" width="294" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="402-1B-Us2">
-                                <rect key="frame" x="40" y="489" width="334" height="50"/>
+                                <rect key="frame" x="40" y="746" width="334" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cPR-Io-gUz"/>
                                 </constraints>
@@ -230,34 +235,21 @@
                                     <action selector="backButton:" destination="9oG-PZ-tZA" eventType="touchUpInside" id="U0l-u4-z5a"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug0-b0-RuD">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="Nna-N9-UdU"/>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환영한다. 마코카." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-Gu-lBx">
-                                <rect key="frame" x="93" y="261" width="228" height="41"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yP7-mR-0Eu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ug0-b0-RuD" firstAttribute="top" secondItem="yP7-mR-0Eu" secondAttribute="top" id="C4n-VF-eSh"/>
                             <constraint firstItem="402-1B-Us2" firstAttribute="leading" secondItem="yP7-mR-0Eu" secondAttribute="leading" constant="40" id="Hmz-37-TAS"/>
+                            <constraint firstItem="MLc-Gu-lBx" firstAttribute="top" secondItem="yP7-mR-0Eu" secondAttribute="top" constant="190" id="M99-Ux-2Lp"/>
                             <constraint firstItem="MLc-Gu-lBx" firstAttribute="centerX" secondItem="rew-p5-reW" secondAttribute="centerX" id="MQN-ud-7iw"/>
-                            <constraint firstItem="ug0-b0-RuD" firstAttribute="leading" secondItem="yP7-mR-0Eu" secondAttribute="leading" id="RnC-Hc-7cb"/>
-                            <constraint firstItem="402-1B-Us2" firstAttribute="top" secondItem="yP7-mR-0Eu" secondAttribute="top" constant="445" id="SQa-Qk-QGL"/>
-                            <constraint firstItem="ug0-b0-RuD" firstAttribute="trailing" secondItem="yP7-mR-0Eu" secondAttribute="trailing" id="Wue-Bm-AID"/>
+                            <constraint firstAttribute="bottom" secondItem="402-1B-Us2" secondAttribute="bottom" constant="100" id="ifq-lj-UB7"/>
                             <constraint firstItem="yP7-mR-0Eu" firstAttribute="trailing" secondItem="402-1B-Us2" secondAttribute="trailing" constant="40" id="kZm-ed-M4P"/>
-                            <constraint firstItem="MLc-Gu-lBx" firstAttribute="top" secondItem="ug0-b0-RuD" secondAttribute="bottom" constant="173" id="lrt-bV-sGC"/>
+                            <constraint firstAttribute="trailing" secondItem="MLc-Gu-lBx" secondAttribute="trailing" constant="60" id="lQ9-XT-QCL"/>
+                            <constraint firstItem="MLc-Gu-lBx" firstAttribute="leading" secondItem="rew-p5-reW" secondAttribute="leading" constant="60" id="yMe-h4-Ts2"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="navigationBar" destination="Nna-N9-UdU" id="RQ9-sJ-F9L"/>
+                        <outlet property="label" destination="MLc-Gu-lBx" id="I7f-88-afB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vVK-y5-m7j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

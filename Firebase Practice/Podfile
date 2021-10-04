@@ -9,6 +9,7 @@ target 'Firebase Practice' do
 
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
 pod 'SnapKit', '~> 5.0.0'
 pod 'Then'
 

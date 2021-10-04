@@ -11,16 +11,20 @@ import FirebaseAuth
 
 class CompleteViewController: UIViewController {
     
+    // MARK: - Properties
     var text: String?
 
     @IBOutlet weak var navigationBar: UINavigationItem!
+    @IBOutlet weak var label: UILabel!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
+        navigationItem.title = ""
         
         if let text = text {
-            navigationBar.title = text
+            label.text = "\(text) 성공이다. 환영한다. 마코카. 자. 이제 나가도록 하자. 잘가라."
         }
     }
     

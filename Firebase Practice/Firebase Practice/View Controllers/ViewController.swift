@@ -40,10 +40,9 @@ class ViewController: UIViewController {
                 self?.present(alert, animated: true, completion: nil)
                 
             } else {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                guard let nextVC = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
+                guard let nextVC = self?.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController")
                         as? CompleteViewController else { return }
-                nextVC.text = "로그인 성공"
+                nextVC.text = "로그인"
                 self?.navigationController?.pushViewController(nextVC, animated: true)
             }
         }
@@ -56,8 +55,7 @@ class ViewController: UIViewController {
         
     // MARK: - 회원가입
     @IBAction func signUpButton(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let nextVC = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController")
                 as? SignUpViewController else { return }
         navigationController?.pushViewController(nextVC, animated: true)
     }
