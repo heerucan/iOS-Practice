@@ -26,6 +26,11 @@ class SignUpViewController: UIViewController {
         navigationItem.title = ""
     }
     
+    // 화면 터치 시에 키보드 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     // Validate the TextFields
     func validateField() -> String? {
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
