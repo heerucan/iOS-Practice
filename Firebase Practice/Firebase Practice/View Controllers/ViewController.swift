@@ -8,6 +8,8 @@
 import UIKit
 
 import FirebaseAuth
+import Firebase
+import FirebaseFirestore
 
 class ViewController: UIViewController {
     
@@ -18,6 +20,16 @@ class ViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func getUserProfile() {
+        // 사용자 프로필 가져오기
+        if let currentEmail = FirebaseAuth.Auth.auth().currentUser?.email {
+            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController")
+                    as? CompleteViewController else { return }
+            nextVC.text = "너의 이메일은\(currentEmail) \n로그인"
+            self.navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
     
     // MARK: - 로그인
@@ -40,10 +52,7 @@ class ViewController: UIViewController {
                 self?.present(alert, animated: true, completion: nil)
                 
             } else {
-                guard let nextVC = self?.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController")
-                        as? CompleteViewController else { return }
-                nextVC.text = "로그인"
-                self?.navigationController?.pushViewController(nextVC, animated: true)
+                self?.getUserProfile()
             }
         }
     }
@@ -52,7 +61,7 @@ class ViewController: UIViewController {
     @IBAction func appleButton(_ sender: UIButton) {
         
     }
-        
+    
     // MARK: - 회원가입
     @IBAction func signUpButton(_ sender: UIButton) {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController")
