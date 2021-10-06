@@ -12,6 +12,8 @@ import CryptoKit
 import Firebase
 import FirebaseAuth
 import FirebaseFirestore
+import SnapKit
+import Then
 
 class ViewController: UIViewController {
     
@@ -25,6 +27,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpAppleButton()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
     }
     
     // 화면 터치 시에 키보드 내리기
@@ -51,6 +58,7 @@ class ViewController: UIViewController {
               }
         
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: pw) { [weak self] user, error in
+            guard let self = self else { return }
             // 에러가 나거나 유저가 없을 경우
             if let error = error, user == nil {
                 let alert = UIAlertController(
@@ -59,10 +67,10 @@ class ViewController: UIViewController {
                     preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "확인", style: .default))
-                self?.present(alert, animated: true, completion: nil)
+                self.present(alert, animated: true, completion: nil)
                 
-            } else {
-                self?.getUserProfile()
+            } else { // 성공이면 화면전환하고 프로필 가져오기
+                self.getUserProfile()
             }
         }
     }
@@ -71,8 +79,17 @@ class ViewController: UIViewController {
     func setUpAppleButton() {
         let button = ASAuthorizationAppleIDButton()
         button.addTarget(self, action: #selector(touchUpAppleButton(_:)), for: .touchUpInside)
-        button.center = view.center
+//        button.center = view.center
         view.addSubview(button)
+        button.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(415)
+            make.leading.trailing.equalToSuperview().inset(40)
+            make.width.equalTo(334)
+            make.height.equalTo(50)
+        }
+        button.layer.cornerRadius = 7
+        button.clipsToBounds = true
+        
     }
     
     @objc func touchUpAppleButton(_ sender: UIButton) {
@@ -148,7 +165,8 @@ extension ViewController: ASAuthorizationControllerDelegate {
             // 이 자격증명을 사용하여 Firebase에 로그인할 것이다.
             // Firebase는 자격증명을 확인하고 유효한 경우 사용자를 로그인시켜 줄 것이다.
             // 새 사용자인 경우에 Firebase는 ID 토큰에 제공된 정보를 사용하여 새 사용자 계정을 만들 것이다.
-            FirebaseAuth.Auth.auth().signIn(with: credential) { (authDataResult, error) in
+            FirebaseAuth.Auth.auth().signIn(with: credential) { [weak self] (authDataResult, error) in
+                guard let self = self else { return }
                 // 인증 결과에서 Firebase 사용자를 검색하고 사용자 정보를 표시할 수 있다.
                 if let user = authDataResult?.user {
                     print("애플 로그인 성공!", user.uid, user.email ?? "-")
