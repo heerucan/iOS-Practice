@@ -15,9 +15,9 @@ import FirebaseFirestore
 
 class ViewController: UIViewController {
     
+    // MARK: - Properties
     fileprivate var currentNonce: String?
     
-    // MARK: - Properties
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     
@@ -76,16 +76,11 @@ class ViewController: UIViewController {
     }
     
     @objc func touchUpAppleButton(_ sender: UIButton) {
-        performSignIn()
-    }
-    
-    func performSignIn() {
         let request = createAppleIDRequest()
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
         
         authorizationController.delegate = self
         authorizationController.presentationContextProvider = self
-        
         authorizationController.performRequests()
     }
     
@@ -123,11 +118,62 @@ class ViewController: UIViewController {
 }
 
 // MARK: - ASAuthorizationControllerDelegate
+@available(iOS 13.0, *)
 extension ViewController: ASAuthorizationControllerDelegate {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            // 몇 가지 표준 키 검사를 수행
+            // 1. 현재 nonce가 설정되어 있는지 확인
+            guard let nonce = currentNonce else {
+                fatalError("Invalid state: A login callback was received, but no login request was sent.")
+            }
+            
+            // 2. ID 토큰을 검색하여
+            guard let appleIDtoken = appleIDCredential.identityToken else {
+                print("Unable to fetch identity token")
+                return
+            }
+            
+            // 문자열로 변환
+            guard let idTokenString = String(data: appleIDtoken, encoding: .utf8) else {
+                print("Unable to serialize token string from data: \(appleIDtoken.debugDescription)")
+                return
+            }
+            
+            // nonce와 IDToken을 사용하여 OAuth 공급자에게 방금 로그인한 사용자를 나타내는 자격증명을 생성하도록 요청
+            let credential = OAuthProvider.credential(withProviderID: "apple.com",
+                                                      idToken: idTokenString,
+                                                      rawNonce: nonce)
+            
+            // 이 자격증명을 사용하여 Firebase에 로그인할 것이다.
+            // Firebase는 자격증명을 확인하고 유효한 경우 사용자를 로그인시켜 줄 것이다.
+            // 새 사용자인 경우에 Firebase는 ID 토큰에 제공된 정보를 사용하여 새 사용자 계정을 만들 것이다.
+            FirebaseAuth.Auth.auth().signIn(with: credential) { (authDataResult, error) in
+                // 인증 결과에서 Firebase 사용자를 검색하고 사용자 정보를 표시할 수 있다.
+                if let user = authDataResult?.user {
+                    print("애플 로그인 성공!", user.uid, user.email ?? "-")
+                    guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController")
+                            as? CompleteViewController else { return }
+                    nextVC.text = "너의 이메일은\(user.email ?? "") \n애플로그인"
+                    self.navigationController?.pushViewController(nextVC, animated: true)
+                }
+                
+                if error != nil {
+                    print(error?.localizedDescription ?? "error" as Any)
+                    return
+                }
+            }
+        }
+    }
     
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        // Handle error.
+        print("Sign in with Apple errored: \(error)")
+      }
 }
 
 // MARK: - ASAuthorizationControllerPresentationContextProviding
+@available(iOS 13.0, *)
 extension ViewController: ASAuthorizationControllerPresentationContextProviding {
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return self.view.window!

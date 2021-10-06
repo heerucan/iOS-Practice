@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B4F0289270610E700C04D75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B4F0288270610E700C04D75 /* GoogleService-Info.plist */; };
+		5B324481270D70AF00CD52D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B324480270D70AF00CD52D6 /* GoogleService-Info.plist */; };
 		5B4F028B2706398A00C04D75 /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F028A2706398A00C04D75 /* CompleteViewController.swift */; };
 		5B4F028D270774C200C04D75 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F028C270774C200C04D75 /* SignUpViewController.swift */; };
 		5B5A61ED2706043D002E2C54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A61EC2706043D002E2C54 /* AppDelegate.swift */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		320982A579DBACF8575AA44F /* Pods-Firebase Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Practice.debug.xcconfig"; path = "Target Support Files/Pods-Firebase Practice/Pods-Firebase Practice.debug.xcconfig"; sourceTree = "<group>"; };
 		5B2B463D270CCBA00074B585 /* Firebase Practice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Firebase Practice.entitlements"; sourceTree = "<group>"; };
-		5B4F0288270610E700C04D75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5B324480270D70AF00CD52D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B4F028A2706398A00C04D75 /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
 		5B4F028C270774C200C04D75 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5B5A61E92706043D002E2C54 /* Firebase Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				5B2B463D270CCBA00074B585 /* Firebase Practice.entitlements */,
-				5B4F0288270610E700C04D75 /* GoogleService-Info.plist */,
+				5B324480270D70AF00CD52D6 /* GoogleService-Info.plist */,
 				5B4F028F2707794D00C04D75 /* Support */,
 				5B4F02902707796100C04D75 /* Storyboards */,
 				5B4F028E2707793500C04D75 /* View Controllers */,
@@ -187,8 +187,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B5A61F927060440002E2C54 /* LaunchScreen.storyboard in Resources */,
+				5B324481270D70AF00CD52D6 /* GoogleService-Info.plist in Resources */,
 				5B5A61F627060440002E2C54 /* Assets.xcassets in Resources */,
-				5B4F0289270610E700C04D75 /* GoogleService-Info.plist in Resources */,
 				5B5A61F42706043D002E2C54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,7 +406,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,7 +438,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>568798666652-4n5j350d0g9o8toqgupa54h8f5gqc5kt.apps.googleusercontent.com</string>
+	<string>568798666652-q03cj65fem8s2ha35rt00t7ee616iq6u.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.568798666652-4n5j350d0g9o8toqgupa54h8f5gqc5kt</string>
+	<string>com.googleusercontent.apps.568798666652-q03cj65fem8s2ha35rt00t7ee616iq6u</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDBp-be0_TSAaviChRRKiruNwpAzcsnUu4</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>ruheekim.Firebase-Practice</string>
+	<string>ruheekim.FirebasePractice</string>
 	<key>PROJECT_ID</key>
 	<string>myauthtutorial</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:568798666652:ios:5e764d2c586a9aa8b7b259</string>
+	<string>1:568798666652:ios:3d93e464ff0336b8b7b259</string>
 </dict>
 </plist>
