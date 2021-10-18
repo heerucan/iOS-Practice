@@ -23,15 +23,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     
+    let button = ASAuthorizationAppleIDButton().then {
+        $0.addTarget(self, action: #selector(touchUpAppleButton(_:)), for: .touchUpInside)
+        $0.layer.cornerRadius = 7
+        $0.clipsToBounds = true
+    }
+
+        
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpAppleButton()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
         
+        view.addSubview(button)
+        button.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(415)
+            make.leading.trailing.equalToSuperview().inset(40)
+            make.width.equalTo(334)
+            make.height.equalTo(50)
+        }
     }
     
     // 화면 터치 시에 키보드 내리기
@@ -75,23 +84,7 @@ class ViewController: UIViewController {
         }
     }
         
-    // MARK: - Apple 로그인
-    func setUpAppleButton() {
-        let button = ASAuthorizationAppleIDButton()
-        button.addTarget(self, action: #selector(touchUpAppleButton(_:)), for: .touchUpInside)
-//        button.center = view.center
-        view.addSubview(button)
-        button.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(415)
-            make.leading.trailing.equalToSuperview().inset(40)
-            make.width.equalTo(334)
-            make.height.equalTo(50)
-        }
-        button.layer.cornerRadius = 7
-        button.clipsToBounds = true
-        
-    }
-    
+    // MARK: - 애플로그인
     @objc func touchUpAppleButton(_ sender: UIButton) {
         let request = createAppleIDRequest()
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
