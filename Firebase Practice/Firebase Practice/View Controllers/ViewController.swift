@@ -9,6 +9,7 @@ import UIKit
 
 import AuthenticationServices
 import CryptoKit
+import FBSDKLoginKit
 import Firebase
 import FirebaseAuth
 import FirebaseFirestore
@@ -16,7 +17,7 @@ import SnapKit
 import Then
 
 class ViewController: UIViewController {
-    
+
     // MARK: - Properties
     fileprivate var currentNonce: String?
     
@@ -28,12 +29,27 @@ class ViewController: UIViewController {
         $0.layer.cornerRadius = 7
         $0.clipsToBounds = true
     }
-
+    
+    let loginButton = FBLoginButton()
         
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 이부분
+        view.addSubview(loginButton)
+        loginButton.center = view.center
+//        let facebookToken = AccessToken.current!.tokenString
+//        let credential = FacebookAuthProvider.credential(withAccessToken: facebookToken)
+//        FirebaseAuth.Auth.auth().signIn(with: credential) { (result, error) in
+//          if let error = error {
+//            print("Firebase auth fails with error: \(error.localizedDescription)")
+//          } else if let result = result {
+//            print("Firebase login succeeds")
+//          }
+//        }
+        loginButton.permissions = ["public_profile", "email"]
+
         view.addSubview(button)
         button.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(415)

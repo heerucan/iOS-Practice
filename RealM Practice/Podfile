@@ -1,17 +1,12 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'Firebase Practice' do
+target 'RealM Practice' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Firebase Practice
+  # Pods for RealM Practice
 
-pod 'Firebase/Core'
-pod 'Firebase/Auth'
-pod 'Firebase/Firestore'
-pod 'FBSDKLoginKit'
-pod 'SnapKit', '~> 5.0.0'
-pod 'Then'
+  pod 'RealmSwift'
 
 end

@@ -11,6 +11,39 @@
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
+					<key>CFBundleURLTypes</key>
+					<array>
+						<dict>
+							<key>CFBundleURLSchemes</key>
+							<array>
+								<string>fb864509100924928</string>
+							</array>
+						</dict>
+					</array>
+					<key>FacebookAppID</key>
+					<string>864509100924928</string>
+					<key>FacebookClientToken</key>
+					<string>1f290f58f5f986bd03fb6ea307ccfde6</string>
+					<key>FacebookDisplayName</key>
+					<string>Swift Frequency</string>
+					<key>LSApplicationQueriesSchemes</key>
+					<array>
+						<string>fbapi</string>
+						<string>fbapi20130214</string>
+						<string>fbapi20130410</string>
+						<string>fbapi20130702</string>
+						<string>fbapi20131010</string>
+						<string>fbapi20131219</string>
+						<string>fbapi20140410</string>
+						<string>fbapi20140116</string>
+						<string>fbapi20150313</string>
+						<string>fbapi20150629</string>
+						<string>fbapi20160328</string>
+						<string>fbauth</string>
+						<string>fb-messenger-share-api</string>
+						<string>fbauth2</string>
+						<string>fbshareextension</string>
+					</array>
 					<key>UISceneConfigurationName</key>
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
