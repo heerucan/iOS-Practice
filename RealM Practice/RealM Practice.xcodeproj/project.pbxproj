@@ -13,6 +13,9 @@
 		5B8EB254272A91E200D64C46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8EB252272A91E200D64C46 /* Main.storyboard */; };
 		5B8EB256272A91E600D64C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8EB255272A91E600D64C46 /* Assets.xcassets */; };
 		5B8EB259272A91E600D64C46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8EB257272A91E600D64C46 /* LaunchScreen.storyboard */; };
+		5B8EB261272A99B500D64C46 /* ToDoListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB260272A99B500D64C46 /* ToDoListItem.swift */; };
+		5B8EB267272A9D2500D64C46 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB266272A9D2500D64C46 /* EntryViewController.swift */; };
+		5B8EB269272B067900D64C46 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB268272B067800D64C46 /* DetailViewController.swift */; };
 		8D641C6B6D93BDABB0C616DF /* Pods_RealM_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F225BF15DC7398D2D8B60385 /* Pods_RealM_Practice.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		5B8EB255272A91E600D64C46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B8EB258272A91E600D64C46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B8EB25A272A91E600D64C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B8EB260272A99B500D64C46 /* ToDoListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItem.swift; sourceTree = "<group>"; };
+		5B8EB266272A9D2500D64C46 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		5B8EB268272B067800D64C46 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B261F48E9719A9EE41643E73 /* Pods-RealM Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealM Practice.release.xcconfig"; path = "Target Support Files/Pods-RealM Practice/Pods-RealM Practice.release.xcconfig"; sourceTree = "<group>"; };
 		D25E51940FB5EBF21AF7D23D /* Pods-RealM Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealM Practice.debug.xcconfig"; path = "Target Support Files/Pods-RealM Practice/Pods-RealM Practice.debug.xcconfig"; sourceTree = "<group>"; };
 		F225BF15DC7398D2D8B60385 /* Pods_RealM_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealM_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +54,6 @@
 				D25E51940FB5EBF21AF7D23D /* Pods-RealM Practice.debug.xcconfig */,
 				B261F48E9719A9EE41643E73 /* Pods-RealM Practice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,15 +78,50 @@
 		5B8EB24B272A91E200D64C46 /* RealM Practice */ = {
 			isa = PBXGroup;
 			children = (
-				5B8EB24C272A91E200D64C46 /* AppDelegate.swift */,
-				5B8EB24E272A91E200D64C46 /* SceneDelegate.swift */,
-				5B8EB250272A91E200D64C46 /* ViewController.swift */,
-				5B8EB252272A91E200D64C46 /* Main.storyboard */,
+				5B8EB263272A9B3D00D64C46 /* Model */,
+				5B8EB264272A9B4700D64C46 /* Controller */,
+				5B8EB265272A9B5B00D64C46 /* Storyboard */,
+				5B8EB262272A9B3300D64C46 /* Support */,
 				5B8EB255272A91E600D64C46 /* Assets.xcassets */,
-				5B8EB257272A91E600D64C46 /* LaunchScreen.storyboard */,
 				5B8EB25A272A91E600D64C46 /* Info.plist */,
 			);
 			path = "RealM Practice";
+			sourceTree = "<group>";
+		};
+		5B8EB262272A9B3300D64C46 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				5B8EB24C272A91E200D64C46 /* AppDelegate.swift */,
+				5B8EB24E272A91E200D64C46 /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		5B8EB263272A9B3D00D64C46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B8EB260272A99B500D64C46 /* ToDoListItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B8EB264272A9B4700D64C46 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B8EB250272A91E200D64C46 /* ViewController.swift */,
+				5B8EB266272A9D2500D64C46 /* EntryViewController.swift */,
+				5B8EB268272B067800D64C46 /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B8EB265272A9B5B00D64C46 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5B8EB252272A91E200D64C46 /* Main.storyboard */,
+				5B8EB257272A91E600D64C46 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		9035BCEA7EADCC68A0BFF031 /* Frameworks */ = {
@@ -208,7 +248,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B8EB251272A91E200D64C46 /* ViewController.swift in Sources */,
+				5B8EB267272A9D2500D64C46 /* EntryViewController.swift in Sources */,
 				5B8EB24D272A91E200D64C46 /* AppDelegate.swift in Sources */,
+				5B8EB269272B067900D64C46 /* DetailViewController.swift in Sources */,
+				5B8EB261272A99B500D64C46 /* ToDoListItem.swift in Sources */,
 				5B8EB24F272A91E200D64C46 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
