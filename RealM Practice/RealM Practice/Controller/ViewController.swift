@@ -19,7 +19,7 @@ class ViewController: UIViewController {
 
     // MARK: - @IBOutlet, Properties
     
-    // Realm 준비
+    /// Realm 준비
     private let realm = try! Realm()
     private var todoList = [ToDoListItem]()
     
@@ -30,8 +30,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
-        // Realm 파일경로 출력
-        // print(Realm.Configuration.defaultConfiguration.fileURL)
+        /// Realm 파일경로 출력
+        /// print(Realm.Configuration.defaultConfiguration.fileURL)
         print("Home Directory : \(NSHomeDirectory())")
     }
     

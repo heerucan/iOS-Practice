@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -112,11 +113,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYh-7h-M93">
+                                <rect key="frame" x="20" y="758" width="374" height="45"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="PdN-gY-cIm"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="수정하기">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="19"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="editButtonDidTap:" destination="q0v-GG-tcl" eventType="touchUpInside" id="7Cq-5J-ePd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fzy-G7-l6p"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Fzy-G7-l6p" firstAttribute="trailing" secondItem="tYh-7h-M93" secondAttribute="trailing" constant="20" id="8fu-oN-aKg"/>
+                            <constraint firstItem="Fzy-G7-l6p" firstAttribute="bottom" secondItem="tYh-7h-M93" secondAttribute="bottom" constant="10" id="EuI-3O-1ZN"/>
                             <constraint firstItem="X6G-wA-g5E" firstAttribute="leading" secondItem="Fzy-G7-l6p" secondAttribute="leading" constant="20" id="IpX-JN-opX"/>
+                            <constraint firstItem="tYh-7h-M93" firstAttribute="leading" secondItem="Fzy-G7-l6p" secondAttribute="leading" constant="20" id="Jtm-Bx-NiN"/>
                             <constraint firstItem="Fzy-G7-l6p" firstAttribute="trailing" secondItem="Sff-iO-Qlg" secondAttribute="trailing" constant="20" id="Tjf-Lb-pdz"/>
                             <constraint firstItem="Fzy-G7-l6p" firstAttribute="trailing" secondItem="X6G-wA-g5E" secondAttribute="trailing" constant="20" id="Xnm-h2-6AH"/>
                             <constraint firstItem="Sff-iO-Qlg" firstAttribute="top" secondItem="X6G-wA-g5E" secondAttribute="bottom" constant="10" id="bgF-HA-GAB"/>
@@ -124,9 +143,11 @@
                             <constraint firstItem="Sff-iO-Qlg" firstAttribute="leading" secondItem="Fzy-G7-l6p" secondAttribute="leading" constant="20" id="thd-nj-HcM"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="dateLabel" destination="X6G-wA-g5E" id="Fi7-ZE-LWg"/>
-                        <outlet property="listLabel" destination="Sff-iO-Qlg" id="HXh-fD-BPs"/>
+                        <outlet property="dateLabel" destination="Sff-iO-Qlg" id="88H-HW-0GR"/>
+                        <outlet property="listLabel" destination="X6G-wA-g5E" id="fT4-aT-U1d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7Z-5E-Q8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -153,6 +174,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -17,6 +17,7 @@ class DetailViewController: UIViewController {
     private let realm = try! Realm()
     
     public var todoList: ToDoListItem?
+    public var completionHandler: (() -> Void)?
     public var deletionHandler: (() -> Void)?
     
     @IBOutlet var listLabel: UILabel!
@@ -39,6 +40,31 @@ class DetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash,
                                                             target: self,
                                                             action: #selector(deleteButtonDidTap(_:)))
+    }
+    
+    // MARK: - @IBAction
+    
+    @IBAction func editButtonDidTap(_ sender: UIButton) {
+        let alert = UIAlertController(title: "할 일 수정", message: "", preferredStyle: .alert)
+        alert.addTextField { textField in
+            textField.placeholder = self.listLabel.text
+        }
+
+        let ok = UIAlertAction(title: "확인", style: .default) { action in
+             
+            try! self.realm.write {
+                alert.textFields![0].text!
+            }
+            
+            self.completionHandler?()
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion: nil)
     }
     
     // MARK: - @objc
