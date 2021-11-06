@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TODOMATE-->
+        <!--쇼미더아요-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RealM_Practice" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                             <constraint firstItem="YWf-di-GXV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="j23-de-oXW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TODOMATE" id="rp1-rs-UL6">
+                    <navigationItem key="navigationItem" title="쇼미더아요" id="rp1-rs-UL6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="iOu-Dn-R2C">
                             <connections>
                                 <action selector="addButtonDidTap:" destination="BYZ-38-t0r" id="9YL-L2-mSZ"/>
@@ -62,9 +62,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="f4p-EY-dN4">
-                                <rect key="frame" x="0.0" y="166" width="414" height="696"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4p-EY-dN4">
+                                <rect key="frame" x="0.0" y="258" width="414" height="604"/>
+                                <date key="date" timeIntervalSinceReferenceDate="-67930655.531813979">
+                                    <!--1998-11-06 18:22:24 +0000-->
+                                </date>
                             </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dkk-dT-6AO">
+                                <rect key="frame" x="20" y="156" width="374" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="2Jy-9g-ZIH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h2S-VF-Rst"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -72,14 +83,18 @@
                             <constraint firstItem="TRo-tF-qMs" firstAttribute="top" secondItem="h2S-VF-Rst" secondAttribute="top" constant="20" id="ATx-9D-gAZ"/>
                             <constraint firstItem="TRo-tF-qMs" firstAttribute="leading" secondItem="h2S-VF-Rst" secondAttribute="leading" constant="20" id="B43-02-0Zc"/>
                             <constraint firstItem="h2S-VF-Rst" firstAttribute="bottom" secondItem="f4p-EY-dN4" secondAttribute="bottom" id="Hq0-tr-ae9"/>
+                            <constraint firstItem="f4p-EY-dN4" firstAttribute="top" secondItem="dkk-dT-6AO" secondAttribute="bottom" constant="50" id="JJl-Fi-fVL"/>
                             <constraint firstItem="h2S-VF-Rst" firstAttribute="trailing" secondItem="TRo-tF-qMs" secondAttribute="trailing" constant="20" id="KEI-fe-KdQ"/>
+                            <constraint firstItem="dkk-dT-6AO" firstAttribute="top" secondItem="TRo-tF-qMs" secondAttribute="bottom" constant="40" id="TWA-QC-eGW"/>
                             <constraint firstItem="f4p-EY-dN4" firstAttribute="trailing" secondItem="h2S-VF-Rst" secondAttribute="trailing" id="cKn-XY-YxR"/>
-                            <constraint firstItem="f4p-EY-dN4" firstAttribute="top" secondItem="TRo-tF-qMs" secondAttribute="bottom" constant="50" id="kFh-rI-gH8"/>
+                            <constraint firstItem="dkk-dT-6AO" firstAttribute="leading" secondItem="h2S-VF-Rst" secondAttribute="leading" constant="20" id="hcO-78-xd4"/>
+                            <constraint firstItem="h2S-VF-Rst" firstAttribute="trailing" secondItem="dkk-dT-6AO" secondAttribute="trailing" constant="20" id="pEH-nR-P6Q"/>
                             <constraint firstItem="f4p-EY-dN4" firstAttribute="leading" secondItem="h2S-VF-Rst" secondAttribute="leading" id="w8p-pf-WvZ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="f4p-EY-dN4" id="rew-g7-Is0"/>
+                        <outlet property="mbtiTextField" destination="dkk-dT-6AO" id="YzN-YR-u7o"/>
                         <outlet property="textField" destination="TRo-tF-qMs" id="Lkz-Yw-Q9x"/>
                     </connections>
                 </viewController>
@@ -128,26 +143,39 @@
                                     <action selector="editButtonDidTap:" destination="q0v-GG-tcl" eventType="touchUpInside" id="7Cq-5J-ePd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gt0-Mk-DiN">
+                                <rect key="frame" x="20" y="224" width="374" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="5VK-JG-HX5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fzy-G7-l6p"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Fzy-G7-l6p" firstAttribute="trailing" secondItem="tYh-7h-M93" secondAttribute="trailing" constant="20" id="8fu-oN-aKg"/>
                             <constraint firstItem="Fzy-G7-l6p" firstAttribute="bottom" secondItem="tYh-7h-M93" secondAttribute="bottom" constant="10" id="EuI-3O-1ZN"/>
+                            <constraint firstItem="Fzy-G7-l6p" firstAttribute="trailing" secondItem="gt0-Mk-DiN" secondAttribute="trailing" constant="20" id="IIJ-Fb-gtV"/>
                             <constraint firstItem="X6G-wA-g5E" firstAttribute="leading" secondItem="Fzy-G7-l6p" secondAttribute="leading" constant="20" id="IpX-JN-opX"/>
                             <constraint firstItem="tYh-7h-M93" firstAttribute="leading" secondItem="Fzy-G7-l6p" secondAttribute="leading" constant="20" id="Jtm-Bx-NiN"/>
+                            <constraint firstItem="gt0-Mk-DiN" firstAttribute="top" secondItem="Sff-iO-Qlg" secondAttribute="bottom" constant="10" id="QZh-yN-FxY"/>
                             <constraint firstItem="Fzy-G7-l6p" firstAttribute="trailing" secondItem="Sff-iO-Qlg" secondAttribute="trailing" constant="20" id="Tjf-Lb-pdz"/>
                             <constraint firstItem="Fzy-G7-l6p" firstAttribute="trailing" secondItem="X6G-wA-g5E" secondAttribute="trailing" constant="20" id="Xnm-h2-6AH"/>
                             <constraint firstItem="Sff-iO-Qlg" firstAttribute="top" secondItem="X6G-wA-g5E" secondAttribute="bottom" constant="10" id="bgF-HA-GAB"/>
                             <constraint firstItem="X6G-wA-g5E" firstAttribute="top" secondItem="Fzy-G7-l6p" secondAttribute="top" constant="20" id="h9C-E3-9Wv"/>
+                            <constraint firstItem="gt0-Mk-DiN" firstAttribute="leading" secondItem="Fzy-G7-l6p" secondAttribute="leading" constant="20" id="kc1-7V-7oG"/>
                             <constraint firstItem="Sff-iO-Qlg" firstAttribute="leading" secondItem="Fzy-G7-l6p" secondAttribute="leading" constant="20" id="thd-nj-HcM"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="dateLabel" destination="Sff-iO-Qlg" id="88H-HW-0GR"/>
+                        <outlet property="dateLabel" destination="gt0-Mk-DiN" id="ar6-vR-Iqf"/>
                         <outlet property="listLabel" destination="X6G-wA-g5E" id="fT4-aT-U1d"/>
+                        <outlet property="mbtiLabel" destination="Sff-iO-Qlg" id="GRA-WX-g8E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7Z-5E-Q8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

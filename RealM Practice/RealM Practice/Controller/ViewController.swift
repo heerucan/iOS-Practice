@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     /// Realm 준비
     private let realm = try! Realm()
-    private var todoList = [ToDoListItem]()
+    private var devList = [Developer]()
     
     @IBOutlet weak var mainTableView: UITableView!
     
@@ -31,8 +31,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setTableView()
         /// Realm 파일경로 출력
-        /// print(Realm.Configuration.defaultConfiguration.fileURL)
-        print("Home Directory : \(NSHomeDirectory())")
+        print(Realm.Configuration.defaultConfiguration.fileURL)
+//        print("Home Directory : \(NSHomeDirectory())")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
             guard let self = self else { return }
             self.refresh()
         }
-        vc.title = "할 일 추가"
+        vc.title = "쇼미더아요 참가자 명단"
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -61,15 +61,16 @@ class ViewController: UIViewController {
     func setTableView() {
         mainTableView.delegate = self
         mainTableView.dataSource = self
-        mainTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        mainTableView.register(MainTVC.self, forCellReuseIdentifier: "MainTVC")
     }
     
     func refresh() {
         /// Read :  객체 얻기
-        todoList = realm.objects(ToDoListItem.self).map { listName in
+        devList = realm.objects(Developer.self).map { $0
+//            listName in
 //            let list = listName.list
 //            print(list)
-            return listName
+//            return listName
         }
         //        print(todoList.fir!st)
         //        print(todoList.la!st)
@@ -86,16 +87,16 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let list = todoList[indexPath.row]
+        let list = devList[indexPath.row]
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "detail") as? DetailViewController
         else { return }
         
-        vc.todoList = list
+        vc.devList = list
         vc.deletionHandler = { [weak self] in
             self?.refresh()
         }
         vc.navigationItem.largeTitleDisplayMode = .never
-        vc.title = list.list
+        vc.title = list.name
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -104,12 +105,14 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todoList.count
+        return devList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = todoList[indexPath.row].list
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTVC.id, for: indexPath) as? MainTVC
+        else { return UITableViewCell() }
+        cell.textLabel?.text = devList[indexPath.row].name
+        cell.detailTextLabel?.text = devList[indexPath.row].mbti
         return cell
     }
 }

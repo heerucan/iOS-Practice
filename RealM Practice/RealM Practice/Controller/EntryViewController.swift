@@ -14,6 +14,7 @@ class EntryViewController: UIViewController {
     // MARK: - @IBOutlet, Properties
     
     @IBOutlet var textField: UITextField!
+    @IBOutlet weak var mbtiTextField: UITextField!
     @IBOutlet var datePicker: UIDatePicker!
     
     /// Realm 준비
@@ -50,23 +51,25 @@ class EntryViewController: UIViewController {
     // MARK: - @objc
 
     @objc func saveButtonDidTap(_ sender: UIButton) {
-        if let text = textField.text, !text.isEmpty {
+        if let text = textField.text, !text.isEmpty,
+           let mbti = mbtiTextField.text, !mbti.isEmpty {
             let date = datePicker.date
             
             /// Create : 새로운 할 일 추가하기
-            let newTodoList = ToDoListItem()
-            newTodoList.dueDate = date
-            newTodoList.list = text
+            let newDeveloper = Developer()
+            newDeveloper.name = text
+            newDeveloper.mbti = mbti
+            newDeveloper.birthday = date
             
             try! realm.write {
-            realm.add(newTodoList)
+            realm.add(newDeveloper)
             }
             
             completionHandler?()
             navigationController?.popToRootViewController(animated: true)
             
         } else {
-            print("할 일을 적으세요")
+            print("참가자 명단을 적으세요")
         }
     }
 }
