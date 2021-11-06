@@ -66,7 +66,16 @@ class ViewController: UIViewController {
     
     func refresh() {
         /// Read :  객체 얻기
-        todoList = realm.objects(ToDoListItem.self).map { $0 }
+        todoList = realm.objects(ToDoListItem.self).map { listName in
+//            let list = listName.list
+//            print(list)
+            return listName
+        }
+        //        print(todoList.fir!st)
+        //        print(todoList.la!st)
+//        let results = realm.objects(ToDoListItem.self).filter("list = '세미나 가기'")
+//        let results = realm.objects(ToDoListItem.self).sorted(byKeyPath: "dueDate", ascending: true)
+//        print(results)
         mainTableView.reloadData()
     }
 }
@@ -104,3 +113,4 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
 }
+
