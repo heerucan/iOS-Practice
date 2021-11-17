@@ -17,4 +17,5 @@
 |`8`| `Firebase Auth Practice` | [😊](https://github.com/heerucan/iOS-Practice/tree/main/Firebase%20Practice) | [💬](https://huree-can-do-it.notion.site/Firebase-abed3e5d7ee045958d9c0450cdcce141) | 
 |`9`| `Delegation Pattern Practice` | [😊](https://github.com/heerucan/iOS-Practice/tree/main/Delegate%20Practice) | [💬](https://huree-can-do-it.notion.site/Delegate-Pattern-b867512f2a364e7583963e05aae68b8c) | 
 |`10`| `Realm Database Practice` | [😊](https://github.com/heerucan/iOS-Practice/tree/main/RealM%20Practice) | [💬](https://huree-can-do-it.notion.site/Realm-a21c74cadae544d7b85f91cf3a119a34) | 
+|`11`| `Local Notification Practice` | [😊](https://github.com/heerucan/iOS-Practice/tree/main/Local%20Notification%20Practice) | [💬](https://huree-can-do-it.notion.site/8b9b68e62b5740a8a93b3805cdea8c61) | 
 
