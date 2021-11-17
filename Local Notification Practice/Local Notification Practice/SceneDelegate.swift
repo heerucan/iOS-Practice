@@ -7,6 +7,8 @@
 
 import UIKit
 
+import UserNotifications
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -32,8 +34,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
+        print("sceneWillResignActive")
+        
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().getNotificationSettings { settings in
+                if settings.authorizationStatus == UNAuthorizationStatus.authorized {
+                    
+                    let imageName = "icon"
+                    guard let imageURL = Bundle.main.url(forResource: imageName, withExtension: ".png") else { return }
+                    let attachment = try! UNNotificationAttachment(identifier: imageName, url: imageURL, options: .none)
+                    
+                    let content = UNMutableNotificationContent()
+                    content.badge = 1
+                    content.title = "우리 앱 혹시 껐니?"
+                    content.subtitle = "왜 껐어? 다시 들어와^^;;"
+                    content.body = "들어오라고;"
+                    content.sound = .default
+                    content.userInfo = ["name": "김루희"]
+                    content.attachments = [attachment]
+                    
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                    
+                    let request = UNNotificationRequest(identifier: "comeback",
+                                                        content: content,
+                                                        trigger: trigger)
+                    
+                    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                }
+            }
+        }
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
@@ -49,4 +78,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-
