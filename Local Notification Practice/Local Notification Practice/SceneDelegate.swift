@@ -40,9 +40,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             UNUserNotificationCenter.current().getNotificationSettings { settings in
                 if settings.authorizationStatus == UNAuthorizationStatus.authorized {
                     
+                    let videoName = "video"
                     let imageName = "icon"
+                    guard let videoURL = Bundle.main.url(forResource: videoName, withExtension: ".mov") else { return }
                     guard let imageURL = Bundle.main.url(forResource: imageName, withExtension: ".png") else { return }
-                    let attachment = try! UNNotificationAttachment(identifier: imageName, url: imageURL, options: .none)
+                    let attachment = try! UNNotificationAttachment(identifier: videoName, url: videoURL, options: .none)
                     
                     let content = UNMutableNotificationContent()
                     content.badge = 1
