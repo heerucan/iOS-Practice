@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B217BD72736F8FA006A0A3E /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B217BD62736F8FA006A0A3E /* Developer.swift */; };
+		5B217BDA2736F958006A0A3E /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B217BD92736F958006A0A3E /* MainTVC.swift */; };
 		5B8EB24D272A91E200D64C46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB24C272A91E200D64C46 /* AppDelegate.swift */; };
 		5B8EB24F272A91E200D64C46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB24E272A91E200D64C46 /* SceneDelegate.swift */; };
 		5B8EB251272A91E200D64C46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB250272A91E200D64C46 /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B217BD62736F8FA006A0A3E /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
+		5B217BD92736F958006A0A3E /* MainTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTVC.swift; sourceTree = "<group>"; };
 		5B8EB249272A91E200D64C46 /* RealM Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RealM Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8EB24C272A91E200D64C46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B8EB24E272A91E200D64C46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5B217BD82736F93E006A0A3E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5B217BD92736F958006A0A3E /* MainTVC.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		5B8EB240272A91E200D64C46 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +92,7 @@
 			children = (
 				5B8EB263272A9B3D00D64C46 /* Model */,
 				5B8EB264272A9B4700D64C46 /* Controller */,
+				5B217BD82736F93E006A0A3E /* Cell */,
 				5B8EB265272A9B5B00D64C46 /* Storyboard */,
 				5B8EB262272A9B3300D64C46 /* Support */,
 				5B8EB255272A91E600D64C46 /* Assets.xcassets */,
@@ -100,6 +113,7 @@
 		5B8EB263272A9B3D00D64C46 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B217BD62736F8FA006A0A3E /* Developer.swift */,
 				5B8EB260272A99B500D64C46 /* ToDoListItem.swift */,
 			);
 			path = Model;
@@ -249,10 +263,12 @@
 			files = (
 				5B8EB251272A91E200D64C46 /* ViewController.swift in Sources */,
 				5B8EB267272A9D2500D64C46 /* EntryViewController.swift in Sources */,
+				5B217BDA2736F958006A0A3E /* MainTVC.swift in Sources */,
 				5B8EB24D272A91E200D64C46 /* AppDelegate.swift in Sources */,
 				5B8EB269272B067900D64C46 /* DetailViewController.swift in Sources */,
 				5B8EB261272A99B500D64C46 /* ToDoListItem.swift in Sources */,
 				5B8EB24F272A91E200D64C46 /* SceneDelegate.swift in Sources */,
+				5B217BD72736F8FA006A0A3E /* Developer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
