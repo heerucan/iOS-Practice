@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 10.0, *) {
             let notiCenter = UNUserNotificationCenter.current()
             notiCenter.delegate = self
-            notiCenter.requestAuthorization(options: [.alert, .sound, .badge]) { (didAllow, error) in
+            notiCenter.requestAuthorization(options: [.alert, .sound, .badge, .providesAppNotificationSettings, .provisional]) { (didAllow, error) in
                 print(didAllow)
             }
         }
@@ -50,10 +50,10 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         
         guard let rootViewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController else { return }
         
+        // "comeback" 이라는 알림을 받은 경우 -> 프린트문을 찍고 / rootVC의 배경색을 바꾸겠다.
         if response.notification.request.identifier == "comeback" {
             let userInfo = response.notification.request.content.userInfo
-            print(userInfo)
-            let vc = ViewController()
+            print(userInfo, "comeback", "didReceive")
     
             rootViewController.view.backgroundColor = .orange
         }
@@ -62,22 +62,26 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        guard let rootViewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController else { return }
 
+        // "foreground" 이라는 알림을 받은 경우 -> 프린트문을 찍고 / rootVC의 배경색을 바꾸겠다.
         if notification.request.identifier == "foreground" {
             let userInfo = notification.request.content.userInfo
-            print(userInfo)
-            window?.rootViewController?.view.backgroundColor = .brown
+            print(userInfo, "foreground", "willPresent")
+            rootViewController.view.backgroundColor = .systemPink
         }
         
+        // banner도 보이게 하겠다.
         completionHandler([.banner])
     }
     
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, openSettingsFor notification: UNNotification?) {
-        if notification!.request.identifier == "comback" {
-            let userInfo = notification!.request.content.userInfo
-            print(userInfo)
-        }
+        print("openSettingsFor")
+        
+        guard let rootViewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController else { return }
+        
+        rootViewController.view.backgroundColor = .yellow
     }
-    
 }

@@ -58,7 +58,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     content.attachments = [attachment]
                     
                     /// 일정 시간 이후에 알림 발생
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
                     
                     /// 일정 날짜와 시간에 알림 발생
                     //  let date = Date(timeIntervalSinceNow: 3600*5)
@@ -96,13 +96,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     content.attachments = [attachment]
                     
                     /// 일정 시간 이후에 알림 발생
-//                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
                     
                     /// 일정 날짜와 시간에 알림 발생
-                     let date = Date(timeIntervalSinceNow: 3600*5)
-                     let trigger = UNCalendarNotificationTrigger(
-                        dateMatching: Calendar.current.dateComponents([.day, .month, .year, .hour, .minute],
-                                                                      from: date), repeats: false)
+//                     let date = Date(timeIntervalSinceNow: 3600*5)
+//                     let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.day, .month, .year, .hour, .minute], from: date), repeats: false)
                     
                     let request = UNNotificationRequest(identifier: "foreground",
                                                         content: content,
