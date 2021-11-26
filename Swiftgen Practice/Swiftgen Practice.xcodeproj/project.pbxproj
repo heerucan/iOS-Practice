@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F7B488BBF9D2D1F96948345 /* Pods_Swiftgen_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A535C290AE4708ADC15D5095 /* Pods_Swiftgen_Practice.framework */; };
 		5B92470127513A7C002C2EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92470027513A7C002C2EBA /* AppDelegate.swift */; };
 		5B92470327513A7C002C2EBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92470227513A7C002C2EBA /* SceneDelegate.swift */; };
 		5B92470527513A7C002C2EBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92470427513A7C002C2EBA /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		5B92470927513A80002C2EBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B92470C27513A80002C2EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B92470E27513A80002C2EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A535C290AE4708ADC15D5095 /* Pods_Swiftgen_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiftgen_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC98311ACF02053528EC1CAC /* Pods-Swiftgen Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftgen Practice.debug.xcconfig"; path = "Target Support Files/Pods-Swiftgen Practice/Pods-Swiftgen Practice.debug.xcconfig"; sourceTree = "<group>"; };
+		CEB8CD82F10E0C872B2019FE /* Pods-Swiftgen Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftgen Practice.release.xcconfig"; path = "Target Support Files/Pods-Swiftgen Practice/Pods-Swiftgen Practice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F7B488BBF9D2D1F96948345 /* Pods_Swiftgen_Practice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				5B9246FF27513A7C002C2EBA /* Swiftgen Practice */,
 				5B9246FE27513A7C002C2EBA /* Products */,
+				6CC2D271AFD90F370E5E1E42 /* Pods */,
+				C9FD86AE984278F41EC8A4B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = "Swiftgen Practice";
 			sourceTree = "<group>";
 		};
+		6CC2D271AFD90F370E5E1E42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC98311ACF02053528EC1CAC /* Pods-Swiftgen Practice.debug.xcconfig */,
+				CEB8CD82F10E0C872B2019FE /* Pods-Swiftgen Practice.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C9FD86AE984278F41EC8A4B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A535C290AE4708ADC15D5095 /* Pods_Swiftgen_Practice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B92471127513A80002C2EBA /* Build configuration list for PBXNativeTarget "Swiftgen Practice" */;
 			buildPhases = (
+				55A6768462A4D3F9AFF005C1 /* [CP] Check Pods Manifest.lock */,
 				5B9246F927513A7C002C2EBA /* Sources */,
 				5B9246FA27513A7C002C2EBA /* Frameworks */,
 				5B9246FB27513A7C002C2EBA /* Resources */,
+				B849A0371C2F75D662FA56D1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55A6768462A4D3F9AFF005C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swiftgen Practice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B849A0371C2F75D662FA56D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swiftgen Practice/Pods-Swiftgen Practice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swiftgen Practice/Pods-Swiftgen Practice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swiftgen Practice/Pods-Swiftgen Practice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B9246F927513A7C002C2EBA /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		5B92471227513A80002C2EBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC98311ACF02053528EC1CAC /* Pods-Swiftgen Practice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		5B92471327513A80002C2EBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEB8CD82F10E0C872B2019FE /* Pods-Swiftgen Practice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
