@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" title="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Swiftgen_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWe-eK-939">
+                                <rect key="frame" x="157" y="332" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Xj4-bx-Lwb"/>
+                                    <constraint firstAttribute="height" constant="50" id="peQ-nI-3dU"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X3Y-bU-Fqp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AWe-eK-939" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="44D-Aa-NJj"/>
+                            <constraint firstItem="AWe-eK-939" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="288" id="QBs-gL-3IV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="AWe-eK-939" id="4xi-Wi-qal"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="82"/>
+        </scene>
+        <!--SecondViewController-->
+        <scene sceneID="5Qi-rc-qKq">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" title="SecondViewController" id="ekp-Rn-jZM" customClass="SecondViewController" customModule="Swiftgen_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o6L-93-Vbh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wyx-qb-S72">
+                                <rect key="frame" x="40" y="275" width="334" height="346"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xQi-lD-DKe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wyx-qb-S72" firstAttribute="leading" secondItem="o6L-93-Vbh" secondAttribute="leadingMargin" constant="20" id="5Je-Xm-H59"/>
+                            <constraint firstItem="Wyx-qb-S72" firstAttribute="centerY" secondItem="o6L-93-Vbh" secondAttribute="centerY" id="En2-qx-EEV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wyx-qb-S72" secondAttribute="trailing" constant="20" id="JHQ-Vp-O2j"/>
+                            <constraint firstItem="Wyx-qb-S72" firstAttribute="centerX" secondItem="o6L-93-Vbh" secondAttribute="centerX" id="RmC-9g-fXa"/>
+                            <constraint firstItem="Wyx-qb-S72" firstAttribute="top" secondItem="xQi-lD-DKe" secondAttribute="top" constant="231" id="o1j-MC-eIm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cathuImageView" destination="Wyx-qb-S72" id="tFk-NR-RgM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Phd-XM-mds" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="746" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

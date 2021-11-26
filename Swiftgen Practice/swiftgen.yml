@@ -41,6 +41,16 @@ fonts:
   outputs:
     templateName: swift5
     output: Fonts.swift
+    
+ib:
+  inputs:
+    - Storyboard
+  outputs:
+    - templateName: scenes-swift5
+      output: Storyboard Scenes.swift
+    - templateName: segues-swift5
+      output: Storyboard Segues.swift
+
 
 
 ## Generate constants for your storyboards and XIBs.

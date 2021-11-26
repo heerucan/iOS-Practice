@@ -19,6 +19,9 @@
 		5B92471B27514EB0002C2EBA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B92471A27514EB0002C2EBA /* Colors.xcassets */; };
 		5B92471E275155BF002C2EBA /* neodgm.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B92471D275155BF002C2EBA /* neodgm.ttf */; };
 		5B92472027515645002C2EBA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92471F27515645002C2EBA /* Fonts.swift */; };
+		5B924722275157C0002C2EBA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B924721275157C0002C2EBA /* SecondViewController.swift */; };
+		5B924726275159BE002C2EBA /* Storyboard Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B924724275159BE002C2EBA /* Storyboard Scenes.swift */; };
+		5B924727275159BE002C2EBA /* Storyboard Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B924725275159BE002C2EBA /* Storyboard Segues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		5B92471A27514EB0002C2EBA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5B92471D275155BF002C2EBA /* neodgm.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = neodgm.ttf; sourceTree = "<group>"; };
 		5B92471F27515645002C2EBA /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		5B924721275157C0002C2EBA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5B924724275159BE002C2EBA /* Storyboard Scenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard Scenes.swift"; sourceTree = "<group>"; };
+		5B924725275159BE002C2EBA /* Storyboard Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard Segues.swift"; sourceTree = "<group>"; };
 		A535C290AE4708ADC15D5095 /* Pods_Swiftgen_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiftgen_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC98311ACF02053528EC1CAC /* Pods-Swiftgen Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftgen Practice.debug.xcconfig"; path = "Target Support Files/Pods-Swiftgen Practice/Pods-Swiftgen Practice.debug.xcconfig"; sourceTree = "<group>"; };
 		CEB8CD82F10E0C872B2019FE /* Pods-Swiftgen Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftgen Practice.release.xcconfig"; path = "Target Support Files/Pods-Swiftgen Practice/Pods-Swiftgen Practice.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,15 +80,15 @@
 		5B9246FF27513A7C002C2EBA /* Swiftgen Practice */ = {
 			isa = PBXGroup;
 			children = (
+				5B92472327515986002C2EBA /* Storyboard */,
 				5B92471C275155B0002C2EBA /* Font */,
 				5B9247172751486E002C2EBA /* Constant */,
 				5B92470027513A7C002C2EBA /* AppDelegate.swift */,
 				5B92470227513A7C002C2EBA /* SceneDelegate.swift */,
 				5B92470427513A7C002C2EBA /* ViewController.swift */,
-				5B92470627513A7C002C2EBA /* Main.storyboard */,
+				5B924721275157C0002C2EBA /* SecondViewController.swift */,
 				5B92470927513A80002C2EBA /* Assets.xcassets */,
 				5B92471A27514EB0002C2EBA /* Colors.xcassets */,
-				5B92470B27513A80002C2EBA /* LaunchScreen.storyboard */,
 				5B92470E27513A80002C2EBA /* Info.plist */,
 			);
 			path = "Swiftgen Practice";
@@ -91,6 +97,8 @@
 		5B9247172751486E002C2EBA /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				5B924724275159BE002C2EBA /* Storyboard Scenes.swift */,
+				5B924725275159BE002C2EBA /* Storyboard Segues.swift */,
 				5B92471F27515645002C2EBA /* Fonts.swift */,
 				5B92471827514D40002C2EBA /* Assets+Generated.swift */,
 			);
@@ -103,6 +111,15 @@
 				5B92471D275155BF002C2EBA /* neodgm.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		5B92472327515986002C2EBA /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5B92470B27513A80002C2EBA /* LaunchScreen.storyboard */,
+				5B92470627513A7C002C2EBA /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		6CC2D271AFD90F370E5E1E42 /* Pods */ = {
@@ -258,11 +275,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B924722275157C0002C2EBA /* SecondViewController.swift in Sources */,
+				5B924726275159BE002C2EBA /* Storyboard Scenes.swift in Sources */,
 				5B92470527513A7C002C2EBA /* ViewController.swift in Sources */,
 				5B92472027515645002C2EBA /* Fonts.swift in Sources */,
 				5B92470127513A7C002C2EBA /* AppDelegate.swift in Sources */,
 				5B92471927514D40002C2EBA /* Assets+Generated.swift in Sources */,
 				5B92470327513A7C002C2EBA /* SceneDelegate.swift in Sources */,
+				5B924727275159BE002C2EBA /* Storyboard Segues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
