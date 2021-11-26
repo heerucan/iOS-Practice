@@ -18,4 +18,6 @@
 |`9`| `Delegation Pattern Practice` | [😊](https://github.com/heerucan/iOS-Practice/tree/main/Delegate%20Practice) | [💬](https://huree-can-do-it.notion.site/Delegate-Pattern-b867512f2a364e7583963e05aae68b8c) | 
 |`10`| `Realm Database Practice` | [😊](https://github.com/heerucan/iOS-Practice/tree/main/RealM%20Practice) | [💬](https://huree-can-do-it.notion.site/Realm-a21c74cadae544d7b85f91cf3a119a34) | 
 |`11`| `Local Notification Practice` | [😊](https://github.com/heerucan/iOS-Practice/tree/main/Local%20Notification%20Practice) | [💬](https://huree-can-do-it.notion.site/8b9b68e62b5740a8a93b3805cdea8c61) | 
-
+|`12`| `SwiftGen Practice` | [😊](https://github.com/heerucan/iOS-Practice/tree/main/Swiftgen%20Practice) | [💬](https://www.notion.so/huree-can-do-it/SwiftGen-3699bde6755e4cd0a5e3ad646064d3b6) | 
+|`13`| `Factory Pattern Practice` | [😊](https://github.com/heerucan/iOS-Practice/tree/main/Pattern%20Practice/Factory-Pattern.playground) | [💬](https://www.notion.so/huree-can-do-it/1-378b5231bafd4284b650e4ef955e070f) | 
+|`14`| `Observer Pattern Practice` | [😊](https://github.com/heerucan/iOS-Practice/tree/main/Pattern%20Practice/Observer-Pattern-Practice.playground) | [💬](https://www.notion.so/huree-can-do-it/2-e33ab03b2eee4fcbb878d397034c59a4) | 

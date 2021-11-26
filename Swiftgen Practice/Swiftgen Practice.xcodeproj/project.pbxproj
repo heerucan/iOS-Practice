@@ -97,10 +97,10 @@
 		5B9247172751486E002C2EBA /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				5B92471827514D40002C2EBA /* Assets+Generated.swift */,
 				5B924724275159BE002C2EBA /* Storyboard Scenes.swift */,
 				5B924725275159BE002C2EBA /* Storyboard Segues.swift */,
 				5B92471F27515645002C2EBA /* Fonts.swift */,
-				5B92471827514D40002C2EBA /* Assets+Generated.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
