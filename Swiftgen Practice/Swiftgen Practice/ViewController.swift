@@ -8,12 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let label = UILabel()
+    let imageView = UIImageView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        label.textColor = Asset.Colors.btobBlue.color
+        imageView.image = Asset.Assets.icBall.image
     }
 
 
 }
+
 

@@ -14,6 +14,9 @@
 		5B92470827513A7C002C2EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B92470627513A7C002C2EBA /* Main.storyboard */; };
 		5B92470A27513A80002C2EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B92470927513A80002C2EBA /* Assets.xcassets */; };
 		5B92470D27513A80002C2EBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B92470B27513A80002C2EBA /* LaunchScreen.storyboard */; };
+		5B924716275144FE002C2EBA /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 5B924715275144FE002C2EBA /* swiftgen.yml */; };
+		5B92471927514D40002C2EBA /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92471827514D40002C2EBA /* Assets+Generated.swift */; };
+		5B92471B27514EB0002C2EBA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B92471A27514EB0002C2EBA /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		5B92470927513A80002C2EBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B92470C27513A80002C2EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B92470E27513A80002C2EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B924715275144FE002C2EBA /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		5B92471827514D40002C2EBA /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
+		5B92471A27514EB0002C2EBA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A535C290AE4708ADC15D5095 /* Pods_Swiftgen_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiftgen_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC98311ACF02053528EC1CAC /* Pods-Swiftgen Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftgen Practice.debug.xcconfig"; path = "Target Support Files/Pods-Swiftgen Practice/Pods-Swiftgen Practice.debug.xcconfig"; sourceTree = "<group>"; };
 		CEB8CD82F10E0C872B2019FE /* Pods-Swiftgen Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftgen Practice.release.xcconfig"; path = "Target Support Files/Pods-Swiftgen Practice/Pods-Swiftgen Practice.release.xcconfig"; sourceTree = "<group>"; };
@@ -45,6 +51,7 @@
 		5B9246F427513A7C002C2EBA = {
 			isa = PBXGroup;
 			children = (
+				5B924715275144FE002C2EBA /* swiftgen.yml */,
 				5B9246FF27513A7C002C2EBA /* Swiftgen Practice */,
 				5B9246FE27513A7C002C2EBA /* Products */,
 				6CC2D271AFD90F370E5E1E42 /* Pods */,
@@ -63,15 +70,25 @@
 		5B9246FF27513A7C002C2EBA /* Swiftgen Practice */ = {
 			isa = PBXGroup;
 			children = (
+				5B9247172751486E002C2EBA /* Constant */,
 				5B92470027513A7C002C2EBA /* AppDelegate.swift */,
 				5B92470227513A7C002C2EBA /* SceneDelegate.swift */,
 				5B92470427513A7C002C2EBA /* ViewController.swift */,
 				5B92470627513A7C002C2EBA /* Main.storyboard */,
 				5B92470927513A80002C2EBA /* Assets.xcassets */,
+				5B92471A27514EB0002C2EBA /* Colors.xcassets */,
 				5B92470B27513A80002C2EBA /* LaunchScreen.storyboard */,
 				5B92470E27513A80002C2EBA /* Info.plist */,
 			);
 			path = "Swiftgen Practice";
+			sourceTree = "<group>";
+		};
+		5B9247172751486E002C2EBA /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				5B92471827514D40002C2EBA /* Assets+Generated.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		6CC2D271AFD90F370E5E1E42 /* Pods */ = {
@@ -80,7 +97,6 @@
 				AC98311ACF02053528EC1CAC /* Pods-Swiftgen Practice.debug.xcconfig */,
 				CEB8CD82F10E0C872B2019FE /* Pods-Swiftgen Practice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -100,6 +116,7 @@
 			buildConfigurationList = 5B92471127513A80002C2EBA /* Build configuration list for PBXNativeTarget "Swiftgen Practice" */;
 			buildPhases = (
 				55A6768462A4D3F9AFF005C1 /* [CP] Check Pods Manifest.lock */,
+				5B92471427513C07002C2EBA /* ShellScript */,
 				5B9246F927513A7C002C2EBA /* Sources */,
 				5B9246FA27513A7C002C2EBA /* Frameworks */,
 				5B9246FB27513A7C002C2EBA /* Resources */,
@@ -152,9 +169,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B92471B27514EB0002C2EBA /* Colors.xcassets in Resources */,
 				5B92470D27513A80002C2EBA /* LaunchScreen.storyboard in Resources */,
 				5B92470A27513A80002C2EBA /* Assets.xcassets in Resources */,
 				5B92470827513A7C002C2EBA /* Main.storyboard in Resources */,
+				5B924716275144FE002C2EBA /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +202,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5B92471427513C07002C2EBA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi \n";
+		};
 		B849A0371C2F75D662FA56D1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +245,7 @@
 			files = (
 				5B92470527513A7C002C2EBA /* ViewController.swift in Sources */,
 				5B92470127513A7C002C2EBA /* AppDelegate.swift in Sources */,
+				5B92471927514D40002C2EBA /* Assets+Generated.swift in Sources */,
 				5B92470327513A7C002C2EBA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
