@@ -33,6 +33,15 @@ xcassets:
         forceProvidesNamespaces: true
         forceFileNameEnum: false
       output: Assets+Generated.swift
+      
+      
+fonts:
+  inputs:
+    - Font
+  outputs:
+    templateName: swift5
+    output: Fonts.swift
+
 
 ## Generate constants for your storyboards and XIBs.
 ##   This one generates 2 output files, one containing the storyboard scenes, and another for the segues.
