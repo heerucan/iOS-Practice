@@ -21,3 +21,4 @@
 |`12`| `SwiftGen Practice` | [😊](https://github.com/heerucan/iOS-Practice/tree/main/Swiftgen%20Practice) | [💬](https://www.notion.so/huree-can-do-it/SwiftGen-3699bde6755e4cd0a5e3ad646064d3b6) | 
 |`13`| `Factory Pattern Practice` | [😊](https://github.com/heerucan/iOS-Practice/tree/main/Pattern%20Practice/Factory-Pattern.playground) | [💬](https://www.notion.so/huree-can-do-it/1-378b5231bafd4284b650e4ef955e070f) | 
 |`14`| `Observer Pattern Practice` | [😊](https://github.com/heerucan/iOS-Practice/tree/main/Pattern%20Practice/Observer-Pattern-Practice.playground) | [💬](https://www.notion.so/huree-can-do-it/2-e33ab03b2eee4fcbb878d397034c59a4) | 
+|`15`| `Adapter Pattern Practice` | [😊](https://github.com/heerucan/iOS-Practice/tree/main/Pattern%20Practice/Adapter.playground) | [💬](https://huree-can-do-it.notion.site/4-53d793c60dbb49dba9377191ae581471) |
