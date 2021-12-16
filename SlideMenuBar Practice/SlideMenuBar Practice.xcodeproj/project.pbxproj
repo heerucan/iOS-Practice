@@ -14,6 +14,9 @@
 		5BE1D065276BD62D0091D788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE1D063276BD62D0091D788 /* Main.storyboard */; };
 		5BE1D067276BD6310091D788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE1D066276BD6310091D788 /* Assets.xcassets */; };
 		5BE1D06A276BD6310091D788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE1D068276BD6310091D788 /* LaunchScreen.storyboard */; };
+		5BE1D073276BDC500091D788 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1D072276BDC500091D788 /* CustomTabBarView.swift */; };
+		5BE1D075276BDDDF0091D788 /* PageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1D074276BDDDF0091D788 /* PageCVC.swift */; };
+		5BE1D077276BE1210091D788 /* TabCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE1D076276BE1210091D788 /* TabCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		5BE1D066276BD6310091D788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BE1D069276BD6310091D788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BE1D06B276BD6310091D788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BE1D072276BDC500091D788 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		5BE1D074276BDDDF0091D788 /* PageCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCVC.swift; sourceTree = "<group>"; };
+		5BE1D076276BE1210091D788 /* TabCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCVC.swift; sourceTree = "<group>"; };
 		C0E8C31B095BF3CBF894C2C8 /* Pods-SlideMenuBar Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuBar Practice.release.xcconfig"; path = "Target Support Files/Pods-SlideMenuBar Practice/Pods-SlideMenuBar Practice.release.xcconfig"; sourceTree = "<group>"; };
 		D3DABDF1CDC14F79026E6907 /* Pods-SlideMenuBar Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuBar Practice.debug.xcconfig"; path = "Target Support Files/Pods-SlideMenuBar Practice/Pods-SlideMenuBar Practice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,15 +77,26 @@
 		5BE1D05C276BD62D0091D788 /* SlideMenuBar Practice */ = {
 			isa = PBXGroup;
 			children = (
-				5BE1D05D276BD62D0091D788 /* AppDelegate.swift */,
-				5BE1D05F276BD62D0091D788 /* SceneDelegate.swift */,
+				5BE1D072276BDC500091D788 /* CustomTabBarView.swift */,
 				5BE1D061276BD62D0091D788 /* ViewController.swift */,
-				5BE1D063276BD62D0091D788 /* Main.storyboard */,
-				5BE1D066276BD6310091D788 /* Assets.xcassets */,
-				5BE1D068276BD6310091D788 /* LaunchScreen.storyboard */,
+				5BE1D076276BE1210091D788 /* TabCVC.swift */,
+				5BE1D074276BDDDF0091D788 /* PageCVC.swift */,
+				5BE1D071276BDC100091D788 /* Resource */,
 				5BE1D06B276BD6310091D788 /* Info.plist */,
 			);
 			path = "SlideMenuBar Practice";
+			sourceTree = "<group>";
+		};
+		5BE1D071276BDC100091D788 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5BE1D068276BD6310091D788 /* LaunchScreen.storyboard */,
+				5BE1D063276BD62D0091D788 /* Main.storyboard */,
+				5BE1D066276BD6310091D788 /* Assets.xcassets */,
+				5BE1D05D276BD62D0091D788 /* AppDelegate.swift */,
+				5BE1D05F276BD62D0091D788 /* SceneDelegate.swift */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		B4B15CAEAC38443B1F1A61CA /* Pods */ = {
@@ -88,7 +105,6 @@
 				D3DABDF1CDC14F79026E6907 /* Pods-SlideMenuBar Practice.debug.xcconfig */,
 				C0E8C31B095BF3CBF894C2C8 /* Pods-SlideMenuBar Practice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,7 +225,10 @@
 			files = (
 				5BE1D062276BD62D0091D788 /* ViewController.swift in Sources */,
 				5BE1D05E276BD62D0091D788 /* AppDelegate.swift in Sources */,
+				5BE1D075276BDDDF0091D788 /* PageCVC.swift in Sources */,
 				5BE1D060276BD62D0091D788 /* SceneDelegate.swift in Sources */,
+				5BE1D077276BE1210091D788 /* TabCVC.swift in Sources */,
+				5BE1D073276BDC500091D788 /* CustomTabBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
