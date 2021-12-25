@@ -14,15 +14,19 @@ class TabCVC: UICollectionViewCell {
     
     static let identifier = "TabCVC"
         
-    override var isSelected: Bool {
-        didSet{
-            tabMenuLabel.textColor = isSelected ? .purple : .lightGray
-        }
-    }
+//    override var isSelected: Bool {
+//        didSet{
+//            tabMenuLabel.textColor = isSelected ? .purple : .lightGray
+//        }
+//    }
     
-    override func prepareForReuse() {
-        isSelected = false
-    }
+    override var isSelected: Bool {
+         willSet {
+             if newValue { tabMenuLabel.textColor = .purple }
+             else { tabMenuLabel.textColor = .lightGray }
+             tabMenuLabel.textColor = newValue ? .purple : .lightGray
+         }
+     }
 
     public let tabMenuLabel = UILabel().then {
         $0.font = .boldSystemFont(ofSize: 20)

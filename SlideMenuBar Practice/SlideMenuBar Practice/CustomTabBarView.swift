@@ -42,7 +42,6 @@ class CustomTabBarView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configUI()
         setupAutoLayout()
         setupCollectionView()
     }
@@ -52,10 +51,6 @@ class CustomTabBarView: UIView {
     }
     
     // MARK: - UI & Layout
-    
-    func configUI() {
-        backgroundColor = .gray
-    }
     
     func setupAutoLayout() {
         addSubview(tabCV)
@@ -84,6 +79,7 @@ class CustomTabBarView: UIView {
 // MARK: - UICollectionViewDelegate
 
 extension CustomTabBarView: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectCustomTabDelegate?.selectTabMenu(index: indexPath.item)
     }
@@ -104,7 +100,10 @@ extension CustomTabBarView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TabCVC.identifier, for: indexPath) as? TabCVC else { return UICollectionViewCell() }
         cell.tabMenuLabel.text = menuList[indexPath.item]
-        
+        if indexPath.item == 0 {
+            cell.isSelected = true
+            collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .init())
+        }
         return cell
     }
 }
