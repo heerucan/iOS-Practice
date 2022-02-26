@@ -31,6 +31,10 @@ class ViewController: UIViewController {
     }
     
     let loginButton = FBLoginButton()
+    
+    private let appleButton = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .whiteOutline).then {
+        $0.addTarget(self, action: #selector(touchupAppleLoginButton), for: .touchUpInside)
+    }
         
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -51,11 +55,19 @@ class ViewController: UIViewController {
         loginButton.permissions = ["public_profile", "email"]
 
         view.addSubview(button)
+        view.addSubview(appleButton)
+        
         button.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(415)
             make.leading.trailing.equalToSuperview().inset(40)
             make.width.equalTo(334)
             make.height.equalTo(50)
+        }
+        
+        appleButton.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(40)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(52)
         }
     }
     
@@ -110,6 +122,20 @@ class ViewController: UIViewController {
         authorizationController.performRequests()
     }
     
+    // MARK: - 파베말고 찐 애플로그인
+    @objc func touchupAppleLoginButton() {
+        // provider를 만들어서 요청해야하고 원하는 정보도 입력해야 함
+        let authorizationProvider = ASAuthorizationAppleIDProvider()
+        let request = authorizationProvider.createRequest()
+        request.requestedScopes = [.email, .fullName]
+        
+        /// authorizationController를 만들고 delegate를 현재 뷰컨으로 위임처리한다.
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
+    }
+    
     @available(iOS 13, *)
     func createAppleIDRequest() -> ASAuthorizationAppleIDRequest {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
@@ -147,11 +173,20 @@ class ViewController: UIViewController {
 @available(iOS 13.0, *)
 extension ViewController: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        guard let realAppleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential,
+            let identityToken = String(data: realAppleIDCredential.identityToken ?? Data(), encoding: .utf8),
+            let authCode = String(data: realAppleIDCredential.authorizationCode ?? Data(), encoding: .utf8)
+        else { return }
+        
+        print("찐찐찐apple Token : ", identityToken)
+        print("찐authCode : ", authCode)
+        
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             // 몇 가지 표준 키 검사를 수행
             // 1. 현재 nonce가 설정되어 있는지 확인
             guard let nonce = currentNonce else {
-                fatalError("Invalid state: A login callback was received, but no login request was sent.")
+                return print("nonce 에러")
+//                fatalError("Invalid state: A login callback was received, but no login request was sent.")
             }
             
             // 2. ID 토큰을 검색하여
@@ -165,6 +200,9 @@ extension ViewController: ASAuthorizationControllerDelegate {
                 print("Unable to serialize token string from data: \(appleIDtoken.debugDescription)")
                 return
             }
+            print("ID토큰", appleIDtoken)
+            print("문자열로변환", idTokenString)
+            
             
             // nonce와 IDToken을 사용하여 OAuth 공급자에게 방금 로그인한 사용자를 나타내는 자격증명을 생성하도록 요청
             let credential = OAuthProvider.credential(withProviderID: "apple.com",
@@ -178,7 +216,7 @@ extension ViewController: ASAuthorizationControllerDelegate {
                 guard let self = self else { return }
                 // 인증 결과에서 Firebase 사용자를 검색하고 사용자 정보를 표시할 수 있다.
                 if let user = authDataResult?.user {
-                    print("애플 로그인 성공!", user.uid, user.email ?? "-")
+                    print("애플 로그인 성공!", user.uid, user.refreshToken, user.email ?? "-")
                     guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController")
                             as? CompleteViewController else { return }
                     nextVC.text = "너의 이메일은\(user.email ?? "") \n애플로그인"
