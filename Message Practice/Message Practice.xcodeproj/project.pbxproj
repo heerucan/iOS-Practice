@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B69B9C2280011BC007A8FF9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B69B9C1280011BC007A8FF9 /* SecondViewController.swift */; };
 		BB74AFD827CA917F001DE311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74AFD727CA917F001DE311 /* AppDelegate.swift */; };
 		BB74AFDA27CA917F001DE311 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74AFD927CA917F001DE311 /* SceneDelegate.swift */; };
 		BB74AFDC27CA917F001DE311 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB74AFDB27CA917F001DE311 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B69B9C1280011BC007A8FF9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		BB74AFD427CA917F001DE311 /* Message Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Message Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB74AFD727CA917F001DE311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB74AFD927CA917F001DE311 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				BB74AFE527CA9180001DE311 /* Info.plist */,
 				BB74B00527CAB56F001DE311 /* Storyboard */,
 				BB74B00427CAB565001DE311 /* Support */,
+				5B69B9C1280011BC007A8FF9 /* SecondViewController.swift */,
 			);
 			path = "Message Practice";
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B69B9C2280011BC007A8FF9 /* SecondViewController.swift in Sources */,
 				BB74AFDC27CA917F001DE311 /* ViewController.swift in Sources */,
 				BB74AFD827CA917F001DE311 /* AppDelegate.swift in Sources */,
 				BB74AFDA27CA917F001DE311 /* SceneDelegate.swift in Sources */,

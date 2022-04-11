@@ -17,6 +17,7 @@ class MainTableViewCell: UITableViewCell {
         didSet {
             
             messageLabel.text = myMessage.content
+            messageLabel.textColor = .black
         }
     }
 

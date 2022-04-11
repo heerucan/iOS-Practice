@@ -14,20 +14,24 @@ class ViewController: UIViewController {
     
     var message = [[MessageModel]]()
     
-    lazy var messageArray = [MessageModel(content: "오늘은2022년4월12일", time: Date.dateFromCustomString(customString: "04/12/2022")),
-                   MessageModel(content: "오늘은2022년4월03일", time: Date.dateFromCustomString(customString: "04/3/2022")),
-                   MessageModel(content: "오늘은2022년3월19일", time: Date.dateFromCustomString(customString: "03/19/2022")),
-                   MessageModel(content: "오늘은2022년2월23일", time: Date.dateFromCustomString(customString: "02/23/2022")),
-                   MessageModel(content: "오늘은2022년2월23일", time: Date.dateFromCustomString(customString: "02/23/2022")),
-                   MessageModel(content: "오늘은2022년2월23일", time: Date.dateFromCustomString(customString: "02/23/2022")),
-                   MessageModel(content: "오늘은2022년2월23일", time: Date.dateFromCustomString(customString: "02/23/2000"))]
+    var isTop = false
+    var messageList = [MessageModel]()
+    
+    lazy var messageArray = [
+        MessageModel(content: "오늘은2022년4월12일", time: Date.dateFromCustomString(customString: "04/12/2022")),
+        MessageModel(content: "오늘은2022년4월03일", time: Date.dateFromCustomString(customString: "04/3/2022")),
+        MessageModel(content: "오늘은2022년8월19일", time: Date.dateFromCustomString(customString: "08/19/2022")),
+        MessageModel(content: "오늘은2022년2월23일", time: Date.dateFromCustomString(customString: "02/23/2022")),
+        MessageModel(content: "오늘은2022년2월23일", time: Date.dateFromCustomString(customString: "02/23/2022")),
+        MessageModel(content: "오늘은2022년2월23일", time: Date.dateFromCustomString(customString: "02/23/2022")),
+        MessageModel(content: "오늘은2022년2월23일", time: Date.dateFromCustomString(customString: "02/23/2000"))]
     
     let mainTV = UITableView()
-
+    
     func assembleDateByMonth() {
-//        let groupedDate = Dictionary(grouping: messageArray) { element -> Date in
-//            return element.time
-//        }
+        //        let groupedDate = Dictionary(grouping: messageArray) { element -> Date in
+        //            return element.time
+        //        }
         
         let groupedDate = Dictionary(grouping: messageArray) { $0.time.month}
         print(groupedDate)
@@ -42,7 +46,7 @@ class ViewController: UIViewController {
             print()
             
             message.append(values ?? [])
-
+            
         }
         
     }
@@ -103,17 +107,20 @@ extension ViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
+//        print(message.count, "여기다")
         return message.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(message[section], "안되겟네")
         return message[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
-//        let chatMessage = chatMessages[indexPath.row]
+        //        let chatMessage = chatMessages[indexPath.row]
         let myMessage = message[indexPath.section][indexPath.row]
+        print(myMessage,"셀 내용")
         cell.myMessage = myMessage
         return cell
     }

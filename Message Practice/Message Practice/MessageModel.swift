@@ -12,3 +12,9 @@ struct MessageModel {
     var image: UIImage?
     var time: Date
 }
+
+
+struct Profile {
+    var imageName: String
+    var statusMessage: String
+}
