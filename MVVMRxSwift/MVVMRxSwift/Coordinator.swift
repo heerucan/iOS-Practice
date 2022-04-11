@@ -19,6 +19,5 @@ class Coordinator {
         let navigationRootViewController = UINavigationController(rootViewController: rootViewController)
         window.rootViewController = navigationRootViewController
         window.makeKeyAndVisible()
-        
     }
 }
