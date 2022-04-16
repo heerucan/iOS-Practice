@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AVAudioPlayerPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMK-jd-lnY">
+                                <rect key="frame" x="170.5" y="387" width="73" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="음악재생"/>
+                                <connections>
+                                    <action selector="touchupPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ut-dJ-XQW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wN-Dr-XEO">
+                                <rect key="frame" x="170.5" y="459" width="73" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="음악멈춤"/>
+                                <connections>
+                                    <action selector="touchupPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z0c-Sn-siB"/>
+                                    <action selector="touchupStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iyr-yr-dcz"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l6c-GZ-9Tj">
+                                <rect key="frame" x="87" y="170" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="inu-w1-j1A"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAi-J9-q0N">
+                                <rect key="frame" x="169" y="573" width="77" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="UJK-YW-8he"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="읽어주쇼!"/>
+                                <connections>
+                                    <action selector="readButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YWL-la-8qM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6wN-Dr-XEO" firstAttribute="top" secondItem="hMK-jd-lnY" secondAttribute="bottom" constant="41" id="5Ab-V1-7Ay"/>
+                            <constraint firstItem="aAi-J9-q0N" firstAttribute="top" secondItem="6wN-Dr-XEO" secondAttribute="bottom" constant="83" id="EPf-dn-feg"/>
+                            <constraint firstItem="hMK-jd-lnY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="343" id="H0O-Of-H5j"/>
+                            <constraint firstItem="6wN-Dr-XEO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q5V-sV-QLL"/>
+                            <constraint firstItem="l6c-GZ-9Tj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="Uul-Xh-m3h"/>
+                            <constraint firstItem="hMK-jd-lnY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c93-4x-qo3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l6c-GZ-9Tj" secondAttribute="trailing" constant="87" id="hvu-oy-FZc"/>
+                            <constraint firstItem="aAi-J9-q0N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="iKd-lJ-dac"/>
+                            <constraint firstItem="l6c-GZ-9Tj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="126" id="r3a-wz-Ot1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aAi-J9-q0N" secondAttribute="trailing" constant="168" id="x39-D4-hMs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="hMK-jd-lnY" id="6LM-p2-0Q4"/>
+                        <outlet property="textView" destination="l6c-GZ-9Tj" id="7t8-aY-1M0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

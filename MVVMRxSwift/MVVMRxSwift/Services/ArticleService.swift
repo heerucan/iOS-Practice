@@ -9,7 +9,11 @@ import Foundation
 import Alamofire
 import RxSwift
 
-class ArticleServcie {
+protocol ArticleServiceProtocol {
+    func fetchNews() -> Observable<[Article]>
+}
+
+class ArticleServcie: ArticleServiceProtocol {
     
     func fetchNews() -> Observable<[Article]> {
         return Observable.create { (observer) -> Disposable in
