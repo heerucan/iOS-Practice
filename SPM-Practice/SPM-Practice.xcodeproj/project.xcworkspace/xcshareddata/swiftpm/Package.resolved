@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "WALKit",
+        "repositoryURL": "https://github.com/zanzanbari/WALKit.git",
+        "state": {
+          "branch": "develop",
+          "revision": "4cb49a675f6537bca821f1d23ef75aff63c65413",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

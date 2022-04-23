@@ -7,113 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B20477F2808F78200C0EBD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B20477E2808F78200C0EBD2 /* AppDelegate.swift */; };
-		5B2047812808F78200C0EBD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2047802808F78200C0EBD2 /* SceneDelegate.swift */; };
-		5B2047832808F78200C0EBD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2047822808F78200C0EBD2 /* ViewController.swift */; };
-		5B2047862808F78200C0EBD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2047842808F78200C0EBD2 /* Main.storyboard */; };
-		5B2047882808F78400C0EBD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B2047872808F78400C0EBD2 /* Assets.xcassets */; };
-		5B20478B2808F78400C0EBD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2047892808F78400C0EBD2 /* LaunchScreen.storyboard */; };
-		5B2047942808F93200C0EBD2 /* runningman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B2047932808F93200C0EBD2 /* runningman.mp3 */; };
+		5B00AEB82814866E00EA3EE7 /* WALKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5B00AEB72814866E00EA3EE7 /* WALKit */; };
+		5BC093292814794000390BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC093282814794000390BB6 /* AppDelegate.swift */; };
+		5BC0932B2814794000390BB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0932A2814794000390BB6 /* SceneDelegate.swift */; };
+		5BC0932D2814794000390BB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0932C2814794000390BB6 /* ViewController.swift */; };
+		5BC093302814794000390BB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC0932E2814794000390BB6 /* Main.storyboard */; };
+		5BC093322814794400390BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC093312814794400390BB6 /* Assets.xcassets */; };
+		5BC093352814794400390BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC093332814794400390BB6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B20477B2808F78200C0EBD2 /* AVAudioPlayerPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVAudioPlayerPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B20477E2808F78200C0EBD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B2047802808F78200C0EBD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B2047822808F78200C0EBD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5B2047852808F78200C0EBD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5B2047872808F78400C0EBD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5B20478A2808F78400C0EBD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5B20478C2808F78400C0EBD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B2047932808F93200C0EBD2 /* runningman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = runningman.mp3; path = "../../../../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/runningman.mp3"; sourceTree = "<group>"; };
+		5BC093252814794000390BB6 /* SPM-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SPM-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC093282814794000390BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BC0932A2814794000390BB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5BC0932C2814794000390BB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5BC0932F2814794000390BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BC093312814794400390BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BC093342814794400390BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BC093362814794400390BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5B2047782808F78200C0EBD2 /* Frameworks */ = {
+		5BC093222814794000390BB6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B00AEB82814866E00EA3EE7 /* WALKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B2047722808F78200C0EBD2 = {
+		5BC0931C2814794000390BB6 = {
 			isa = PBXGroup;
 			children = (
-				5B20477D2808F78200C0EBD2 /* AVAudioPlayerPractice */,
-				5B20477C2808F78200C0EBD2 /* Products */,
+				5BC093272814794000390BB6 /* SPM-Practice */,
+				5BC093262814794000390BB6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5B20477C2808F78200C0EBD2 /* Products */ = {
+		5BC093262814794000390BB6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B20477B2808F78200C0EBD2 /* AVAudioPlayerPractice.app */,
+				5BC093252814794000390BB6 /* SPM-Practice.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5B20477D2808F78200C0EBD2 /* AVAudioPlayerPractice */ = {
+		5BC093272814794000390BB6 /* SPM-Practice */ = {
 			isa = PBXGroup;
 			children = (
-				5B2047922808F90A00C0EBD2 /* Music */,
-				5B20477E2808F78200C0EBD2 /* AppDelegate.swift */,
-				5B2047802808F78200C0EBD2 /* SceneDelegate.swift */,
-				5B2047822808F78200C0EBD2 /* ViewController.swift */,
-				5B2047842808F78200C0EBD2 /* Main.storyboard */,
-				5B2047872808F78400C0EBD2 /* Assets.xcassets */,
-				5B2047892808F78400C0EBD2 /* LaunchScreen.storyboard */,
-				5B20478C2808F78400C0EBD2 /* Info.plist */,
+				5BC093282814794000390BB6 /* AppDelegate.swift */,
+				5BC0932A2814794000390BB6 /* SceneDelegate.swift */,
+				5BC0932C2814794000390BB6 /* ViewController.swift */,
+				5BC0932E2814794000390BB6 /* Main.storyboard */,
+				5BC093312814794400390BB6 /* Assets.xcassets */,
+				5BC093332814794400390BB6 /* LaunchScreen.storyboard */,
+				5BC093362814794400390BB6 /* Info.plist */,
 			);
-			path = AVAudioPlayerPractice;
-			sourceTree = "<group>";
-		};
-		5B2047922808F90A00C0EBD2 /* Music */ = {
-			isa = PBXGroup;
-			children = (
-				5B2047932808F93200C0EBD2 /* runningman.mp3 */,
-			);
-			path = Music;
+			path = "SPM-Practice";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B20477A2808F78200C0EBD2 /* AVAudioPlayerPractice */ = {
+		5BC093242814794000390BB6 /* SPM-Practice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B20478F2808F78400C0EBD2 /* Build configuration list for PBXNativeTarget "AVAudioPlayerPractice" */;
+			buildConfigurationList = 5BC093392814794400390BB6 /* Build configuration list for PBXNativeTarget "SPM-Practice" */;
 			buildPhases = (
-				5B2047772808F78200C0EBD2 /* Sources */,
-				5B2047782808F78200C0EBD2 /* Frameworks */,
-				5B2047792808F78200C0EBD2 /* Resources */,
+				5BC093212814794000390BB6 /* Sources */,
+				5BC093222814794000390BB6 /* Frameworks */,
+				5BC093232814794000390BB6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AVAudioPlayerPractice;
-			productName = AVAudioPlayerPractice;
-			productReference = 5B20477B2808F78200C0EBD2 /* AVAudioPlayerPractice.app */;
+			name = "SPM-Practice";
+			packageProductDependencies = (
+				5B00AEB72814866E00EA3EE7 /* WALKit */,
+			);
+			productName = "SPM-Practice";
+			productReference = 5BC093252814794000390BB6 /* SPM-Practice.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5B2047732808F78200C0EBD2 /* Project object */ = {
+		5BC0931D2814794000390BB6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					5B20477A2808F78200C0EBD2 = {
+					5BC093242814794000390BB6 = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
-			buildConfigurationList = 5B2047762808F78200C0EBD2 /* Build configuration list for PBXProject "AVAudioPlayerPractice" */;
+			buildConfigurationList = 5BC093202814794000390BB6 /* Build configuration list for PBXProject "SPM-Practice" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,56 +115,58 @@
 				en,
 				Base,
 			);
-			mainGroup = 5B2047722808F78200C0EBD2;
-			productRefGroup = 5B20477C2808F78200C0EBD2 /* Products */;
+			mainGroup = 5BC0931C2814794000390BB6;
+			packageReferences = (
+				5B00AEB62814866E00EA3EE7 /* XCRemoteSwiftPackageReference "WALKit" */,
+			);
+			productRefGroup = 5BC093262814794000390BB6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B20477A2808F78200C0EBD2 /* AVAudioPlayerPractice */,
+				5BC093242814794000390BB6 /* SPM-Practice */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5B2047792808F78200C0EBD2 /* Resources */ = {
+		5BC093232814794000390BB6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B20478B2808F78400C0EBD2 /* LaunchScreen.storyboard in Resources */,
-				5B2047882808F78400C0EBD2 /* Assets.xcassets in Resources */,
-				5B2047862808F78200C0EBD2 /* Main.storyboard in Resources */,
-				5B2047942808F93200C0EBD2 /* runningman.mp3 in Resources */,
+				5BC093352814794400390BB6 /* LaunchScreen.storyboard in Resources */,
+				5BC093322814794400390BB6 /* Assets.xcassets in Resources */,
+				5BC093302814794000390BB6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5B2047772808F78200C0EBD2 /* Sources */ = {
+		5BC093212814794000390BB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B2047832808F78200C0EBD2 /* ViewController.swift in Sources */,
-				5B20477F2808F78200C0EBD2 /* AppDelegate.swift in Sources */,
-				5B2047812808F78200C0EBD2 /* SceneDelegate.swift in Sources */,
+				5BC0932D2814794000390BB6 /* ViewController.swift in Sources */,
+				5BC093292814794000390BB6 /* AppDelegate.swift in Sources */,
+				5BC0932B2814794000390BB6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5B2047842808F78200C0EBD2 /* Main.storyboard */ = {
+		5BC0932E2814794000390BB6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5B2047852808F78200C0EBD2 /* Base */,
+				5BC0932F2814794000390BB6 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		5B2047892808F78400C0EBD2 /* LaunchScreen.storyboard */ = {
+		5BC093332814794400390BB6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5B20478A2808F78400C0EBD2 /* Base */,
+				5BC093342814794400390BB6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -178,7 +174,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5B20478D2808F78400C0EBD2 /* Debug */ = {
+		5BC093372814794400390BB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -239,7 +235,7 @@
 			};
 			name = Debug;
 		};
-		5B20478E2808F78400C0EBD2 /* Release */ = {
+		5BC093382814794400390BB6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -294,7 +290,7 @@
 			};
 			name = Release;
 		};
-		5B2047902808F78400C0EBD2 /* Debug */ = {
+		5BC0933A2814794400390BB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -303,7 +299,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5GQ6QL9S3X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AVAudioPlayerPractice/Info.plist;
+				INFOPLIST_FILE = "SPM-Practice/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -314,7 +310,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruheekim.AVAudioPlayerPractice;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ruheekim.SPM-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -322,7 +318,7 @@
 			};
 			name = Debug;
 		};
-		5B2047912808F78400C0EBD2 /* Release */ = {
+		5BC0933B2814794400390BB6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -331,7 +327,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5GQ6QL9S3X;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AVAudioPlayerPractice/Info.plist;
+				INFOPLIST_FILE = "SPM-Practice/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -342,7 +338,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruheekim.AVAudioPlayerPractice;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ruheekim.SPM-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -353,25 +349,44 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B2047762808F78200C0EBD2 /* Build configuration list for PBXProject "AVAudioPlayerPractice" */ = {
+		5BC093202814794000390BB6 /* Build configuration list for PBXProject "SPM-Practice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B20478D2808F78400C0EBD2 /* Debug */,
-				5B20478E2808F78400C0EBD2 /* Release */,
+				5BC093372814794400390BB6 /* Debug */,
+				5BC093382814794400390BB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B20478F2808F78400C0EBD2 /* Build configuration list for PBXNativeTarget "AVAudioPlayerPractice" */ = {
+		5BC093392814794400390BB6 /* Build configuration list for PBXNativeTarget "SPM-Practice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B2047902808F78400C0EBD2 /* Debug */,
-				5B2047912808F78400C0EBD2 /* Release */,
+				5BC0933A2814794400390BB6 /* Debug */,
+				5BC0933B2814794400390BB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B00AEB62814866E00EA3EE7 /* XCRemoteSwiftPackageReference "WALKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zanzanbari/WALKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B00AEB72814866E00EA3EE7 /* WALKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B00AEB62814866E00EA3EE7 /* XCRemoteSwiftPackageReference "WALKit" */;
+			productName = WALKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 5B2047732808F78200C0EBD2 /* Project object */;
+	rootObject = 5BC0931D2814794000390BB6 /* Project object */;
 }
