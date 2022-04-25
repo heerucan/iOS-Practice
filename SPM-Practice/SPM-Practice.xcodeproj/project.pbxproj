@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B00AEB82814866E00EA3EE7 /* WALKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5B00AEB72814866E00EA3EE7 /* WALKit */; };
+		5B00AEC32815744F00EA3EE7 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 5B00AEC22815744F00EA3EE7 /* Then */; };
 		5BC093292814794000390BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC093282814794000390BB6 /* AppDelegate.swift */; };
 		5BC0932B2814794000390BB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0932A2814794000390BB6 /* SceneDelegate.swift */; };
 		5BC0932D2814794000390BB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0932C2814794000390BB6 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B00AEB82814866E00EA3EE7 /* WALKit in Frameworks */,
+				5B00AEC32815744F00EA3EE7 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +89,7 @@
 			name = "SPM-Practice";
 			packageProductDependencies = (
 				5B00AEB72814866E00EA3EE7 /* WALKit */,
+				5B00AEC22815744F00EA3EE7 /* Then */,
 			);
 			productName = "SPM-Practice";
 			productReference = 5BC093252814794000390BB6 /* SPM-Practice.app */;
@@ -118,6 +121,7 @@
 			mainGroup = 5BC0931C2814794000390BB6;
 			packageReferences = (
 				5B00AEB62814866E00EA3EE7 /* XCRemoteSwiftPackageReference "WALKit" */,
+				5B00AEC12815744F00EA3EE7 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 5BC093262814794000390BB6 /* Products */;
 			projectDirPath = "";
@@ -378,6 +382,14 @@
 				kind = branch;
 			};
 		};
+		5B00AEC12815744F00EA3EE7 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -385,6 +397,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5B00AEB62814866E00EA3EE7 /* XCRemoteSwiftPackageReference "WALKit" */;
 			productName = WALKit;
+		};
+		5B00AEC22815744F00EA3EE7 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B00AEC12815744F00EA3EE7 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

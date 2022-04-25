@@ -2,11 +2,29 @@
   "object": {
     "pins": [
       {
+        "package": "SnapKit",
+        "repositoryURL": "https://github.com/SnapKit/SnapKit",
+        "state": {
+          "branch": null,
+          "revision": "f222cbdf325885926566172f6f5f06af95473158",
+          "version": "5.6.0"
+        }
+      },
+      {
+        "package": "Then",
+        "repositoryURL": "https://github.com/devxoul/Then",
+        "state": {
+          "branch": "master",
+          "revision": "e421a7b3440a271834337694e6050133a3958bc7",
+          "version": null
+        }
+      },
+      {
         "package": "WALKit",
         "repositoryURL": "https://github.com/zanzanbari/WALKit.git",
         "state": {
           "branch": "develop",
-          "revision": "4cb49a675f6537bca821f1d23ef75aff63c65413",
+          "revision": "6bb72f980d5da5f5b126e219ecf5d6f9835f6a6c",
           "version": null
         }
       }
