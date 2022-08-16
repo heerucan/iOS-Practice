@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/devxoul/Then",
         "state": {
           "branch": "master",
-          "revision": "e421a7b3440a271834337694e6050133a3958bc7",
+          "revision": "d41ef523faef0f911369f79c0b96815d9dbb6d7a",
           "version": null
         }
       },
@@ -24,7 +24,7 @@
         "repositoryURL": "https://github.com/zanzanbari/WALKit.git",
         "state": {
           "branch": "develop",
-          "revision": "6bb72f980d5da5f5b126e219ecf5d6f9835f6a6c",
+          "revision": "c5ac6e4eebdd9e7a00280d8ab5ec84cd9b381e45",
           "version": null
         }
       }

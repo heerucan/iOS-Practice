@@ -38,11 +38,19 @@ class ViewController: UIViewController {
         return view
     }()
     
-    let textField: WALTextField = {
+    lazy var textField: WALTextField = {
         let textField = WALTextField()
         textField.placeholder = "플레이스홀더"
         textField.isFocusing = true
+        textField.font 
         return textField
+    }()
+    
+    let myButton: WALPlainButton = {
+        let button = WALPlainButton()
+        button.title = "메인으로 보내기"
+        button.isDisabled = true
+        return button
     }()
 
     override func viewDidLoad() {
@@ -52,6 +60,7 @@ class ViewController: UIViewController {
         view.addSubview(deleteImage)
         view.addSubview(navigationBar)
         view.addSubview(textField)
+        view.addSubview(myButton)
         
         myLabel.translatesAutoresizingMaskIntoConstraints = false
         myLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 400).isActive = true
@@ -76,5 +85,11 @@ class ViewController: UIViewController {
         textField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 500).isActive = true
         textField.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 20).isActive = true
         textField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -20).isActive = true
+        
+        myButton.translatesAutoresizingMaskIntoConstraints = false
+        myButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 600).isActive = true
+        myButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 20).isActive = true
+        myButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -20).isActive = true
     }
 }
+

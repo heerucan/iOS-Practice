@@ -33,11 +33,8 @@ class ViewController: UIViewController {
         //            return element.time
         //        }
         
-        let groupedDate = Dictionary(grouping: messageArray) { $0.time.month}
-        print(groupedDate)
-        
-        let groupedYear = Dictionary(grouping: messageArray) { $0.time.year}
-        print(groupedYear)
+        let groupedDate = Dictionary(grouping: messageArray) { $0.time.month }
+        print("------groupedDate: ", groupedDate)
         
         groupedDate.keys.forEach { key in
             print(key)
@@ -48,6 +45,8 @@ class ViewController: UIViewController {
             message.append(values ?? [])
             
         }
+        
+        print("-- message: ", message)
         
     }
     
@@ -88,7 +87,6 @@ extension ViewController: UITableViewDataSource {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy년 M월"
             let dateString = dateFormatter.string(from: firstMessageInSection.time)
-            print(dateString, "이거")
             let label = UILabel()
             label.text = dateString
             label.textColor = .black
@@ -107,12 +105,12 @@ extension ViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-//        print(message.count, "여기다")
+        print("--- message.count::::  ", message.count)
         return message.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(message[section], "안되겟네")
+        print("-------numberOfRowsInSection: ", message[section])
         return message[section].count
     }
     
@@ -120,7 +118,7 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
         //        let chatMessage = chatMessages[indexPath.row]
         let myMessage = message[indexPath.section][indexPath.row]
-        print(myMessage,"셀 내용")
+//        print(myMessage,"셀 내용")
         cell.myMessage = myMessage
         return cell
     }

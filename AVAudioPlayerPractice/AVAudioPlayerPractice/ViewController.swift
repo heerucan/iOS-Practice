@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textView.text = "체이준 바보 똥쟁이 잼민이 ㅋㅋㅋ"
+        textView.text = "오늘 우체국에서 한바탕했어 너에게 내 사랑을 담아 보내려고했는데 그정도 크기의 박스는 없대"
     }
 
     @IBAction func touchupPlayButton(_ sender: Any) {
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         let synthesizer = AVSpeechSynthesizer()
         let utterance = AVSpeechUtterance(string: textView.text)
         
-        utterance.pitchMultiplier = 0.5
+        utterance.pitchMultiplier = 1
         utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
         utterance.rate = 0.5
         synthesizer.speak(utterance)
